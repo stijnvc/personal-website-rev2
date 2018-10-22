@@ -331,12 +331,17 @@ p.homepage-description {
         margin-bottom: .25em;
       }
     }
-    img {
+    img, video {
       filter: brightness(98%);
+      -webkit-filter: brightness(98%);
+      transition: filter 0.5s ease;
     }
   }
   article:hover {
-  opacity: .9;
+    img, video {
+      filter: brightness(90%);
+      -webkit-filter: brightness(90%);
+    }
     .info {
       color: $dark;
     }
@@ -357,7 +362,11 @@ p.homepage-description {
         filter: brightness(98%);
       }
     }
+    p.video {
+      max-width: 100%;
+    }
     h1, h2, h3 {
+      font-size: 1.15em;
       font-weight: 400;
       margin-top: 2em;
       margin-bottom: 1em;

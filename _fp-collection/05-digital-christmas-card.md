@@ -1,14 +1,14 @@
 ---
 title: Digital Christmas Card
-description: A Year In Review newsletter for Smaac presented as a Christmas carol.
+description: A Year In Review website for Smaac presented as a Christmas carol.
 video: kerstvertelling
 permalink: digital-christmas-card
 year: 2015
 category: Graphic Design / Web Development
 ---
 
-During my internship at [Smaac](https://smaac.nl/) I designed a Year In Review
-newsletter presented as a Christmas carol.
+During my internship at [Smaac](https://smaac.nl/) I designed and developed a Year In Review
+website presented as a Christmas carol.
 
 # [Open website →](/kerstvertelling/)
 
