@@ -1,0 +1,50 @@
+<!--
+       __
+      /\ \__  __    __
+  ____\ \ ,_\/\_\  /\_\    ___        __  __    ___
+ /',__\\ \ \/\/\ \ \/\ \ /' _ `\     /\ \/\ \  /'___\
+/\__, `\\ \ \_\ \ \ \ \ \/\ \/\ \  __\ \ \_/ |/\ \__/
+\/\____/ \ \__\\ \_\_\ \ \ \_\ \_\/\_\\ \___/ \ \____\
+ \/___/   \/__/ \/_/\ \_\ \/_/\/_/\/_/ \/__/   \/____/
+                   \ \____/
+                    \/___/
+
+This website is build and maintained by me (Stijn van Cuijk, hello@stijn.vc)
+It's made possible by the following open source projects:
+- Jekyll
+- jQuery
+- masonry
+- Zoom.js
+- Normalize.css
+- FitVids.js
+
+You can view the source of this website on Github: https://github.com/steinvc/personal-website
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>
+      {% if page.title %}
+      {{ page.title }} — {{ site.name }}
+      {% else %}
+      {{ site.name }}
+      {% endif %}
+    </title>
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description.meta }}{% endif %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff3200">
+    <meta name="msapplication-TileColor" content="#ff3200">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/normalize.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="{{ site.baseurl }}/js/jquery.fitvids.js"></script>
+    <script src="{{ site.baseurl }}/js/masonry.pkgd.min.js"></script>
+    <script src="{{ site.baseurl }}/js/imagesloaded.pkgd.min.js"></script>
+
+  </head>

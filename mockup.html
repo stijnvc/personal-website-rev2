@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Stijn van Cuijk</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+
+  </head>
+  <body>
+    <header class="clearfix">
+      <div class="col-1-3">
+        <p>This is the personal website of Stijn van Cuijk. A designer currently
+          studying Industrial Product Design at the <em title="HAN University of Applied Sciences">HAN</em>. Stijn likes to practice
+          his design approach in many different fields. The main focus lays on
+          the process and a way of thinking. Everything can be designed.</p>
+      </div>
+      <div class="col-1-3 contact">
+        <p>
+          Arnhem, Netherlands 2018<br>
+          <a href="#">contact@stijn.vc</a><br>
+          <a href="#">LinkedIn</a><br>
+        </p>
+      </div>
+      <div class="col-1-3">
+        <h1><a href="#">Stijn van Cuijk</a></h1>
+        <!-- <img style="width: 320px; float: right; margin-top: 5px;" src="src/header-img.png"> -->
+      </div>
+    </header>
+    <hr>
+    <main id="main">
+      <div class="grid">
+        <div class="grid-sizer"></div>
+        <article class="grid-item">
+          <img src="src/profile.jpg">
+        </article>
+        <article class="grid-item">
+          <h2>Download Industrial Design Portfolio</h2>
+          <p>Last updated: 2018/8/26</p>
+          <a href="#" class="download-button">PDF, 84 MB</a>
+        </article>
+        <article class="grid-item">
+          <h2>Download Curriculum Vitae</h2>
+          <p>Last updated: 2018/8/5</p>
+          <a href="#" class="download-button">PDF, 12 MB</a>
+        </article>
+        <article class="grid-item">
+          <h2>Short Documentary (Dutch)</h2>
+          <p>A short documentary about Industrial Product Design at the HAN in which students give their opinions about various topics.</p>
+          <p><img src="https://via.placeholder.com/1920x1080"></p>
+          <p>Director & Producer:<br>Stijn van Cuijk</p><p>Co-Producers:<br>Bram Snijders<br>Wing-Han Tang</p>
+
+          <a class="more" href="#">Whatch video<span>→</span></a>
+        </article>
+        <article class="grid-item">
+          <h2>On The Cover</h2>
+          <p>I got to be on the cover of the HAN Industrial Product Design brochure.</p>
+          <p><img src="https://via.placeholder.com/1080x1520"></p>
+        </article>
+        <article class="grid-item">
+          <h2>Music</h2>
+          <p><img src="https://via.placeholder.com/1080x1080"></p>
+          <p>In my free time I like to produce electronic music. You can listen to it on <a href="#">Bandcamp</a>.</p>
+          <a class="more" href="#">Listen<span>→</span></a>
+        </article>
+        <article class="grid-item">
+          <h2>Accreditation Posters</h2>
+          <p>I designed two posters for the accredition of HAN Industrial Product Design. One displaying the newly developed curriculum and the other visualizing the graduation process.</p>
+          <p><img src="https://via.placeholder.com/500x350"></p>
+          <a class="more" href="#">More inside<span>→</span></a>
+        </article>
+        <article class="grid-item">
+          <h2>Inspiration</h2>
+          <p>View my Savee image board.</p>
+          <p><img src="https://via.placeholder.com/500x250"></p>
+          <a class="more" href="#">Savee.it/stijn<span>→</span></a>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <p>© Stijn van Cuijk, 2018</p>
+    </footer>
+    <script>
+      var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
+        gutter: 30,
+        transitionDuration: 0
+      });
+
+      $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
+      });
+      $(document).ready(function(){
+        $("#main").fitVids();
+      });
+    </script>
+  </body>
+</html>

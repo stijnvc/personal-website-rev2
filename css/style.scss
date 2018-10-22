@@ -1,0 +1,405 @@
+$xlight: rgba(0,0,0,.02);
+$light: rgba(0,0,0,.6);
+$dark: rgba(0,0,0,1);
+$accent: #EF4028;
+
+::selection {
+  background: $accent;
+}
+::-moz-selection {
+  background: $accent;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*FREIGHT NEO*/
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-LightItalic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-SemiboldItalic.woff') format('woff');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-Semibold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-Book.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-MediumItalic.woff') format('woff');
+	font-weight: 500;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-BlackItalic.woff') format('woff');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-BookItalic.woff') format('woff');
+	font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Freight Neo Pro';
+	src: url('fonts/FreightNeoPro-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+// AKZIDENZ GROTESK
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-ExtraLightIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Italic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-BlackIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-ExtraBoldIt.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-MedIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Med.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('AkzidGrtskNext-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('AkzidGrtskNext-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('AkzidGrtskNext-BoldIt.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Akzidenz Grotesk Next";
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 300;
+  color: $dark;
+  padding: 0 1em;
+}
+html {
+  overflow-y: scroll;
+}
+h1, h2, h3 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: inherit;
+}
+p {
+  margin: 0;
+  max-width: 600px;
+}
+blockquote {
+  max-width: 600px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+.wrapper {
+  max-width: 900px;
+  min-width: 600px;
+  margin: 0 auto;
+}
+.wrapper::after {
+  content: "";
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  background-color: white;
+  height: 1px;
+}
+header {
+  font-size: 1.15em;
+  margin-top: 1em;
+  .title {
+    float: left;
+    width: 50%;
+    h1 {
+      font-family: "Freight Neo Pro";
+      font-weight: 600;
+      font-size: 1.3em;
+      display: block;
+      margin-top: -.15em;
+    }
+  }
+  nav {
+    float: right;
+    width: 50%;
+    text-align: right;
+    a {
+      display: inline-block;
+      margin-left: 20px;
+      font-weight: 300;
+    }
+    a:hover {
+      position: relative;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      background: -webkit-linear-gradient($dark, $dark);
+      background: -moz-linear-gradient($dark, $dark);
+      background: -o-linear-gradient($dark, $dark);
+      background: -ms-linear-gradient($dark, $dark);
+      background: linear-gradient($dark, $dark);
+      -webkit-background-size: 1px 1px;
+      -moz-background-size: 1px 1px;
+      background-size: 1px 1px;
+      background-repeat: repeat-x;
+      background-size: 1px 1px;
+      background-position: 0 84%;
+    }
+  }
+}
+p.homepage-description {
+  max-width: 100%;
+  margin: 1em 0;
+  color: $light;
+  opacity: .9;
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.fade-in {
+  opacity: 1;
+}
+#homepage {
+  article {
+    margin: 2em 0;
+    .info {
+      margin-top: .5em;
+      color: $light;
+      transition: color 0.5s ease;
+      .description {
+        width: 50%;
+        float: left;
+        padding-right: 5px;
+      }
+      .meta {
+        width: 50%;
+        float: right;
+        padding-left: 5px;
+        text-align: right;
+      }
+      h1 {
+        color: $dark;
+        font-weight: 400;
+      }
+      h1, p {
+        margin-bottom: .25em;
+      }
+    }
+    img {
+      filter: brightness(98%);
+    }
+  }
+  article:hover {
+  opacity: .9;
+    .info {
+      color: $dark;
+    }
+  }
+}
+#page {
+  #main {
+    article {
+      margin: 2em 0;
+    }
+    p {
+      margin: 1em 0;
+      color: $light;
+    }
+    p.img {
+      max-width: 100%;
+      img {
+        filter: brightness(98%);
+      }
+    }
+    h1, h2, h3 {
+      font-weight: 400;
+      margin-top: 2em;
+      margin-bottom: 1em;
+      color: $dark;
+    }
+    blockquote {
+      background-color: $xlight;
+      margin: 1em 0;
+      padding: 1px 1em;
+    }
+    a {
+      color: $dark;
+    }
+    a:hover {
+      position: relative;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      background: -webkit-linear-gradient($dark, $dark);
+      background: -moz-linear-gradient($dark, $dark);
+      background: -o-linear-gradient($dark, $dark);
+      background: -ms-linear-gradient($dark, $dark);
+      background: linear-gradient($dark, $dark);
+      -webkit-background-size: 1px 1px;
+      -moz-background-size: 1px 1px;
+      background-size: 1px 1px;
+      background-repeat: repeat-x;
+      background-size: 1px 1px;
+      background-position: 0 89%;
+    }
+    hr {
+      margin: 0;
+      width: 30px;
+      background: $light;
+      height: 1px;
+      border: none;
+      margin: 3em 0;
+    }
+  }
+}
+footer {
+  margin-bottom: 1em;
+  p {
+    max-width: none;
+    color: $light;
+  }
+}

@@ -1,0 +1,898 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Guide</title><style>* {
+	word-wrap:break-word;
+}
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: white;
+}
+.wrapper {
+	margin: 50px 48px 60px 48px;
+	max-width: 800px;
+}
+@media print {
+	.wrapper {
+		margin: 0;
+	}
+}
+a {
+  color: #4183C4;
+  text-decoration: none;
+}
+
+a.absent {
+  color: #cc0000;
+}
+
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative;
+}
+
+h2:first-child, h1:first-child, h1:first-child + h2, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  text-decoration: none;
+}
+
+h1 tt, h1 code {
+  font-size: inherit;
+}
+
+h2 tt, h2 code {
+  font-size: inherit;
+}
+
+h3 tt, h3 code {
+  font-size: inherit;
+}
+
+h4 tt, h4 code {
+  font-size: inherit;
+}
+
+h5 tt, h5 code {
+  font-size: inherit;
+}
+
+h6 tt, h6 code {
+  font-size: inherit;
+}
+
+h1 {
+  font-size: 28px;
+  color: black;
+}
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h6 {
+  color: #777777;
+  font-size: 14px;
+}
+
+p, blockquote, ul, ol, dl, table, pre {
+  margin: 15px 0;
+}
+
+li {
+	margin: 8px 0;
+}
+
+li ol, li ul {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+hr {
+  background-color: #CCC;
+  height: 1px;
+  padding: 0;
+  border: none;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0;
+}
+
+li p.first {
+  display: inline-block;
+}
+
+ul, ol {
+  padding-left: 30px;
+}
+
+ul :first-child, ol :first-child {
+  margin-top: 0;
+}
+
+ul :last-child, ol :last-child {
+  margin-bottom: 0;
+}
+
+dl {
+  padding: 0;
+}
+
+dl dt {
+  font-size: 14px;
+  font-weight: bold;
+  font-style: italic;
+  padding: 0;
+  margin: 15px 0 5px;
+}
+
+dl dt:first-child {
+  padding: 0;
+}
+
+dl dt > :first-child {
+  margin-top: 0;
+}
+
+dl dt > :last-child {
+  margin-bottom: 0;
+}
+
+dl dd {
+  margin: 0 0 15px;
+  padding: 0 15px;
+}
+
+dl dd > :first-child {
+  margin-top: 0;
+}
+
+dl dd > :last-child {
+  margin-bottom: 0;
+}
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777;
+}
+
+blockquote > :first-child {
+  margin-top: 0;
+}
+
+blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+table {
+  padding: 0;
+}
+table tr {
+  border-top: 1px solid #cccccc;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+table tr th {
+  font-weight: bold;
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr td {
+  border: 1px solid #cccccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+table tr th :first-child, table tr td :first-child {
+  margin-top: 0;
+}
+
+table tr th :last-child, table tr td :last-child {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+span.frame {
+  display: block;
+  overflow: hidden;
+}
+
+span.frame > span {
+  border: 1px solid #dddddd;
+  display: block;
+  float: left;
+  overflow: hidden;
+  margin: 13px 0 0;
+  padding: 7px;
+  width: auto;
+}
+
+span.frame span img {
+  display: block;
+  float: left;
+}
+
+span.frame span span {
+  clear: both;
+  color: #333333;
+  display: block;
+  padding: 5px 0 0;
+}
+
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+span.align-center > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px auto 0;
+  text-align: center;
+}
+
+span.align-center span img {
+  margin: 0 auto;
+  text-align: center;
+}
+
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both;
+}
+
+span.align-right > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px 0 0;
+  text-align: right;
+}
+
+span.align-right span img {
+  margin: 0;
+  text-align: right;
+}
+
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left;
+}
+
+span.float-left span {
+  margin: 13px 0 0;
+}
+
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right;
+}
+
+span.float-right > span {
+  display: block;
+  overflow: hidden;
+  margin: 13px auto 0;
+  text-align: right;
+}
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+}
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent;
+}
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px;
+}
+
+pre code, pre tt {
+  background-color: transparent;
+  border: none;
+}
+
+pre code {
+  display: block; padding: 0.5em;
+  color: #333;
+  background: #f8f8ff
+}
+
+pre .comment,
+pre .template_comment,
+pre .diff .header,
+pre .javadoc {
+  color: #998;
+  font-style: italic
+}
+
+pre .keyword,
+pre .css .rule .keyword,
+pre .winutils,
+pre .javascript .title,
+pre .nginx .title,
+pre .subst,
+pre .request,
+pre .status {
+  color: #333;
+  font-weight: bold
+}
+
+pre .number,
+pre .hexcolor,
+pre .ruby .constant {
+  color: #099;
+}
+
+pre .string,
+pre .tag .value,
+pre .phpdoc,
+pre .tex .formula {
+  color: #d14
+}
+
+pre .title,
+pre .id,
+pre .coffeescript .params,
+pre .scss .preprocessor {
+  color: #900;
+  font-weight: bold
+}
+
+pre .javascript .title,
+pre .lisp .title,
+pre .clojure .title,
+pre .subst {
+  font-weight: normal
+}
+
+pre .class .title,
+pre .haskell .type,
+pre .vhdl .literal,
+pre .tex .command {
+  color: #458;
+  font-weight: bold
+}
+
+pre .tag,
+pre .tag .title,
+pre .rules .property,
+pre .django .tag .keyword {
+  color: #000080;
+  font-weight: normal
+}
+
+pre .attribute,
+pre .variable,
+pre .lisp .body {
+  color: #008080
+}
+
+pre .regexp {
+  color: #009926
+}
+
+pre .class {
+  color: #458;
+  font-weight: bold
+}
+
+pre .symbol,
+pre .ruby .symbol .string,
+pre .lisp .keyword,
+pre .tex .special,
+pre .prompt {
+  color: #990073
+}
+
+pre .built_in,
+pre .lisp .title,
+pre .clojure .built_in {
+  color: #0086b3
+}
+
+pre .preprocessor,
+pre .pragma,
+pre .pi,
+pre .doctype,
+pre .shebang,
+pre .cdata {
+  color: #999;
+  font-weight: bold
+}
+
+pre .deletion {
+  background: #fdd
+}
+
+pre .addition {
+  background: #dfd
+}
+
+pre .diff .change {
+  background: #0086b3
+}
+
+pre .chunk {
+  color: #aaa
+}
+</style></head><body><div class="wrapper"><h1 id="guide">Guide</h1>
+<p>This is a guide for using Nota, and a basic markdown (GFM) guide.</p>
+<h5 id="table-of-contents">Table of contents</h5>
+<ul>
+<li><a href="#-markdown-"><strong>Markdown</strong></a><ul>
+<li><a href="#headers">Headers</a></li>
+<li><a href="#emphasis">Emphasis</a></li>
+<li><a href="#lists">Lists</a><ul>
+<li><a href="#unordered-lists">Unordered lists</a></li>
+<li><a href="#ordered-lists">Ordered lists</a></li>
+<li><a href="#mixed-lists">Mixed lists</a></li>
+</ul>
+</li>
+<li><a href="#links">Links</a><ul>
+<li><a href="#inline">Inline</a></li>
+<li><a href="#reference">Reference</a></li>
+</ul>
+</li>
+<li><a href="#images">Images</a><ul>
+<li><a href="#inline-img-">Inline (img)</a></li>
+<li><a href="#reference-img-">Reference (img)</a></li>
+</ul>
+</li>
+<li><a href="#code-and-syntax-highlighting">Code and Syntax Highlighting</a></li>
+<li><a href="#tables">Tables</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#inline-html">Inline HTML</a></li>
+<li><a href="#horizontal-rules">Horizontal Rules</a></li>
+<li><a href="#youtube-videos">Youtube videos</a></li>
+</ul>
+</li>
+<li><a href="#-using-the-editor-"><strong>Using the editor</strong></a><ul>
+<li><a href="#lists">Lists</a></li>
+<li><a href="#editing-toolbar">Editing toolbar</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#link-pasting">Link pasting</a></li>
+<li><a href="#convert-all-inline-linked-content-to-references">Convert all inline linked content to references</a></li>
+<li><a href="#table-of-contents">Table of contents</a><ul>
+<li><a href="#automatic-table-of-contents">Automatic table of contents</a></li>
+</ul>
+</li>
+<li><a href="#exporting-html">Exporting HTML</a></li>
+<li><a href="#copying-html">Copying HTML</a></li>
+<li><a href="#document-title">Document title</a></li>
+<li><a href="#hidden-content">Hidden content</a></li>
+<li><a href="#snippets">Snippets</a></li>
+<li><a href="#themes">Themes</a><ul>
+<li><a href="#making-a-theme">Making a theme</a></li>
+</ul>
+</li>
+<li><a href="#printing">Printing</a><ul>
+<li><a href="#page-breaks">Page breaks</a></li>
+</ul>
+</li>
+<li><a href="#searching">Searching</a></li>
+<li><a href="#other-tips">Other tips</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="-markdown-"><strong>Markdown</strong></h2>
+<h3 id="headers">Headers</h3>
+<pre><code>H1: # Header level-1
+H2: ## Header level-2
+H3: ### Header level-3
+H4: #### Header level-4
+H5: ##### Header level-5
+H6: ###### Header level-6</code></pre>
+<p>Or alternatively, for H1 and H2, an underline-ish style:</p>
+<pre><code>Alt H1
+======
+
+Alt H2
+------</code></pre>
+<h3 id="emphasis">Emphasis</h3>
+<pre><code>Emphasis, aka italics, with *asterisks* or _underscores_.
+
+Strong emphasis, aka bold, with **asterisks** or __underscores__.
+
+Combined emphasis with **asterisks and _underscores_**.
+
+Strikethrough uses two tildes. ~~Scratch this.~~</code></pre>
+<p>Emphasis, aka italics, with <em>asterisks</em> or <em>underscores</em>.</p>
+<p>Strong emphasis, aka bold, with <strong>asterisks</strong> or <strong>underscores</strong>.</p>
+<p>Combined emphasis with <strong>asterisks and <em>underscores</em></strong>.</p>
+<p>Strikethrough uses two tildes. <del>Scratch this.</del></p>
+<h3 id="lists">Lists</h3>
+<h5 id="unordered-lists">Unordered lists</h5>
+<p>Unordered lists can use <code>*, + and -</code>.</p>
+<pre><code>* List item one
+- List item two
+    * Sub list item
++ List item three</code></pre>
+<ul>
+<li>List item one</li>
+<li>List item two<ul>
+<li>Sub list item</li>
+</ul>
+</li>
+<li>List item three</li>
+</ul>
+<h5 id="ordered-lists">Ordered lists</h5>
+<p>Ordered lists can use any number, order doesn&#39;t matter.</p>
+<pre><code>1. List item one
+2. list item two
+    5. Sub list item
+0. list item three</code></pre>
+<ol>
+<li>List item one</li>
+<li>list item two<ol>
+<li>Sub list item</li>
+</ol>
+</li>
+<li>list item three</li>
+</ol>
+<h5 id="mixed-lists">Mixed lists</h5>
+<pre><code>1. List item one
+2. list item two
+    * Sub list item
+0. list item three</code></pre>
+<ol>
+<li>List item one</li>
+<li>list item two<ul>
+<li>Sub list item</li>
+</ul>
+</li>
+<li>list item three</li>
+</ol>
+<h3 id="links">Links</h3>
+<p>There are two ways to create links.</p>
+<h5 id="inline">Inline</h5>
+<pre><code>[Inline-style link][ref-1]
+
+[Inline-style link with title][ref-2]</code></pre>
+<p><a href="http://example.com">Inline-style link</a></p>
+<p><a href="http://example.com" title="Example link">Inline-style link with title</a></p>
+<h5 id="reference">Reference</h5>
+<pre><code>[Reference-style link using number][1]
+
+[Reference-style link using text][reference link]
+
+[1]: http://example.com/number
+[reference link]: http://example.com/text</code></pre>
+<p><a href="http://example.com/number">Reference-style link using number</a></p>
+<p><a href="http://example.com/text">Reference-style link using text</a></p>
+<h3 id="images">Images</h3>
+<p>Like links, there are two ways to insert images: inline and reference.</p>
+<h5 id="inline-img-">Inline (img)</h5>
+<pre><code>![alt text][ref-5]</code></pre>
+<p><img src="http://www.placehold.it/301x150.gif" alt="alt text" title="Image 1 title"></p>
+<h5 id="reference-img-">Reference (img)</h5>
+<pre><code>![alt text][image]
+
+[image]: http://www.placehold.it/302x150.gif &quot;Image 2 title&quot;</code></pre>
+<p><img src="http://www.placehold.it/302x150.gif" alt="alt text" title="Image 2 title"></p>
+<h3 id="code-and-syntax-highlighting">Code and Syntax Highlighting</h3>
+<p>Code blocks are part of the original Markdown spec, but syntax highlighting isn&#39;t. However, many renderers support syntax highlighting. Nota supports syntax highlighting for most of the popular languages.</p>
+<pre><code>Inline `code` has `back-ticks around` it.</code></pre>
+<p>Inline <code>code</code> has <code>back-ticks around</code> it.</p>
+<p>Blocks of code are either fenced by lines with three back-ticks <code>```</code>, or are indented with four spaces. It&#39;s recommended to only use the fenced code blocks — they&#39;re easier and only they support syntax highlighting.</p>
+<pre><code>```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+```
+No language indicated, so no syntax highlighting.
+```
+</code></pre>
+
+<pre><code class="lang-xml"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"xml"</span>&gt;</span>Syntax highlighting<span class="tag">&lt;/<span class="title">div</span>&gt;</span></code></pre>
+<pre><code class="lang-css"><span class="class">.css</span> <span class="rules">{
+    <span class="rule"><span class="attribute">syntax</span>:<span class="value"> <span class="string">'highlighting'</span></span></span>;
+<span class="rule">}</span></span></code></pre>
+<pre><code>No language indicated, so no syntax highlighting.</code></pre>
+<h3 id="tables">Tables</h3>
+<p>Tables aren&#39;t part of the core Markdown spec, but they are part of Github Flavored Markdown (GFM). They are an easy way of adding tables to your email — a task that would otherwise require copy-pasting from another application.</p>
+<pre><code>Colons can be used to align columns.
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. You can also use inline Markdown.
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3</code></pre>
+<p>Colons can be used to align columns.</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>The outer pipes (|) are optional, and you don&#39;t need to make the raw Markdown line up prettily. You can also use inline Markdown.</p>
+<table>
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blockquotes">Blockquotes</h3>
+<pre><code class="lang-no-highlight">&gt; Blockquotes are very handy in email to emulate reply text.
+&gt; This line is part of the same quote.
+
+Quote break.
+
+&gt; This is a very long line that will still be quoted properly when it wraps. Oh boy let&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can *put* **Markdown** into a blockquote.</code></pre>
+<blockquote>
+<p>Blockquotes are very handy in email to emulate reply text.<br>This line is part of the same quote.</p>
+</blockquote>
+<p>Quote break.</p>
+<blockquote>
+<p>This is a very long line that will still be quoted properly when it wraps. Oh boy let&#39;s keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can <em>put</em> <strong>Markdown</strong> into a blockquote.</p>
+</blockquote>
+<h3 id="inline-html">Inline HTML</h3>
+<p>You can also use raw HTML in your Markdown, and it&#39;ll mostly work pretty well. </p>
+<pre><code class="lang-xml"><span class="tag">&lt;<span class="title">dl</span>&gt;</span><span class="tag">&lt;<span class="title">dt</span>&gt;</span>Definition list<span class="tag">&lt;/<span class="title">dt</span>&gt;</span><span class="tag">&lt;<span class="title">dd</span>&gt;</span>Is something people use sometimes.<span class="tag">&lt;/<span class="title">dd</span>&gt;</span><span class="tag">&lt;<span class="title">dt</span>&gt;</span>Markdown in HTML<span class="tag">&lt;/<span class="title">dt</span>&gt;</span><span class="tag">&lt;<span class="title">dd</span>&gt;</span>Does *also* work **very** well.<span class="tag">&lt;/<span class="title">dd</span>&gt;</span><span class="tag">&lt;/<span class="title">dl</span>&gt;</span></code></pre>
+<dl><dt>Definition list</dt><dd>Is something people use sometimes.</dd><dt>Markdown in HTML</dt><dd>Does <em>also</em> work <strong>very</strong> well.</dd></dl>
+
+<blockquote>
+<p>Note: Inline HTML should all be on <strong>one</strong> line (GFM will force a <code>&lt;br&gt;</code> tag on every newline).</p>
+</blockquote>
+<h3 id="horizontal-rules">Horizontal Rules</h3>
+<pre><code>Three or more...
+
+---
+
+Hyphens
+
+***
+
+Asterisks
+
+___
+
+Underscores</code></pre>
+<p>Three or more...</p>
+<hr>
+<p>Hyphens</p>
+<hr>
+<p>Asterisks</p>
+<hr>
+<p>Underscores</p>
+<h3 id="youtube-videos">Youtube videos</h3>
+<p>They can&#39;t be added directly but you can add an image with a link to the video like this:</p>
+<pre><code class="lang-xml"><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"http://www.youtube.com/watch?feature=player_embedded&amp;v=YOUTUBE_VIDEO_ID_HERE
+"</span> <span class="attribute">target</span>=<span class="value">"_blank"</span>&gt;</span><span class="tag">&lt;<span class="title">img</span> <span class="attribute">src</span>=<span class="value">"http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg"</span>
+<span class="attribute">alt</span>=<span class="value">"IMAGE ALT TEXT HERE"</span> <span class="attribute">width</span>=<span class="value">"240"</span> <span class="attribute">height</span>=<span class="value">"180"</span> <span class="attribute">border</span>=<span class="value">"10"</span> /&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></code></pre>
+<p>Or, in pure Markdown, but losing the image sizing and border:</p>
+<pre><code class="lang-no-highlight">[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)][ref-7]</code></pre>
+<h2 id="-using-the-editor-"><strong>Using the editor</strong></h2>
+<p>Besides just editing and previewing markdown, Nota has some very handy features to make editing a lot more efficient and easy. All these features are accessible via the menus, and via shortcuts (wich you can find in the dropdown menus and by hovering over a button). Most features for editing you can find in the Editing Toolbar.</p>
+<h3 id="lists">Lists</h3>
+<p>You can begin a list by typing <code>1.</code> / <code>*</code>, or by pressing <code>Ctrl + L</code> / <code>Ctrl + Shift + L</code>. If you press enter the list will automtically continue. If you want to turn some lines of text into a list you can select it and press <code>Ctrl + L</code> to turn it into an unordered list, or <code>Ctrl + Shift + L</code> to turn in into an ordered list. This will also work to change list types of existing lists. These features can also be accessed via the Editing Toolbar.</p>
+<h3 id="editing-toolbar">Editing toolbar</h3>
+<p>You can acces the Editing Toolbar via the dropdown menus or by pressing <code>Ctrl + Shift + T</code>. The Editing Toolbar&#39;s position can be changed by dragging it around, to bring it back to it&#39;s default position you right click the close button.</p>
+<p>Hover over the buttons of the Editing Toolbar to see what they do and what shortcuts they are bound to. A lot of buttons do something different when you right click them, this is also shown on hovering over them.</p>
+<h3 id="blockquotes">Blockquotes</h3>
+<p>You can turn any selected text or line into a blockquote by pressing <code>Ctrl + Shift + B</code>. Press multiple times to further nest blockquotes.</p>
+<h3 id="link-pasting">Link pasting</h3>
+<p>If you&#39;ve just copied a link you can paste it directly as markdown link using <code>Ctrl + Shift + W</code> (or right-clicking the paste button on the Editing Toolbar). If you&#39;ve selected some text this text will be turned into a link.</p>
+<h3 id="convert-all-inline-linked-content-to-references">Convert all inline linked content to references</h3>
+<p>This feature scans the entire document for inline linked content (images and links) and replaces them with reference links, references collected at the end of the document.</p>
+<p>You can do this via de <code>Edit</code> menu or by pressing <code>Ctrl + R</code>.</p>
+<h3 id="table-of-contents">Table of contents</h3>
+<p>If you want to insert a table of contents based on the headers used in your document you can do this by pressing <code>Ctrl + Shift + O</code>. This will be list with links to the corresponding headers and will be indented based on the header level. Like this:</p>
+<pre><code>* [Level-1 header][ref-8]
+    * [Level-2 header][ref-9]
+        * [Level-3 header][ref-10]
+        * [Level-4 header][ref-11]
+            * [Level-5 header][ref-12]
+            * [Level-6 header][ref-13]</code></pre>
+<ul>
+<li><a href="#level-1-header">Level-1 header</a><ul>
+<li><a href="#level-2-header">Level-2 header</a><ul>
+<li><a href="#level-3-header">Level-3 header</a></li>
+<li><a href="#level-4-header">Level-4 header</a><ul>
+<li><a href="#level-5-header">Level-5 header</a></li>
+<li><a href="#level-6-header">Level-6 header</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h5 id="automatic-table-of-contents">Automatic table of contents</h5>
+<p>To insert a automatically updating table of contents you can type <code>{Table of contents}</code> or <code>{TOC}</code>. This TOC will automatically update if you add or remove any headers. Automatic TOC will only include headers using <code>#</code>. If you want to exclude a header from the automatic TOC you can remove the space between the <code>#</code> and the header text. Like this: <code>#header</code>.</p>
+<blockquote>
+<p>Note: this is not part of the official Markdown spec and will only work in this editor. If you&#39;re going to copy over your document to another editor I suggest you replace {TOC} with a non-automatic TOC.</p>
+</blockquote>
+<h3 id="exporting-html">Exporting HTML</h3>
+<p>To export your document to HTML you can press <code>Ctrl + E</code> or click the quick-export button on the top right. This will export your HTML document without <em>any</em> styling. If you want to include a CSS <a href="#themes">theme</a> you can either use the <code>Ctrl + Shift + E</code> shortcut or right click the quick-export button.</p>
+<h3 id="copying-html">Copying HTML</h3>
+<p>To copy your document as HTML you can press <code>Ctrl + Shift + C</code> or click the quick-copy button on the top right. This will copy your HTML document without <em>any</em> styling. If you want to include a CSS <a href="#themes">theme</a> you can either use the <code>Ctrl + Shift + K</code> shortcut or right click the quick-copy button.</p>
+<h3 id="document-title">Document title</h3>
+<p>The first line of your document will be the title of any HTML document you export. It will also be the suggested name when saving.</p>
+<p>If you want to give your document a title but don&#39;t want that title to be visible inside your document you can wrap it in <code>{hidden}</code> or <code>{h}</code> tags.</p>
+<h3 id="hidden-content">Hidden content</h3>
+<p>If you have any content you don&#39;t want to be visible you can wrap it inside <code>{hidden}</code> or <code>{h}</code> tags.</p>
+<blockquote>
+<p>Note: This is a Nota only feature!</p>
+</blockquote>
+<h3 id="snippets">Snippets</h3>
+<p>Snippet is a programming term for a small region of re-usable source code, or text. In [app name] you can insert snippets by pressing and holding <code>Ctrl + Tab</code> and clicking a snippet. You can save snippets of text/code as .snippet in the <code>C:\Program files\[app name]\snippets</code> folder.</p>
+<p>There are no restrictions in using snippets. You can use snippets in any way you want.</p>
+<h3 id="themes">Themes</h3>
+<p>You can change the look of the live preview using CSS themes. If for example you are writing for a particular website, you (or someone with CSS knowledge) can copy that site&#39;s CSS and make it into a theme, so your preview will look exactely the same as when you publish your article on this website. Or you just want to change the look of it.</p>
+<p>To select a theme you can either use the <code>Ctrl + T</code> shortcut or click <code>Set Preview Theme</code> in the options menu.</p>
+<h5 id="making-a-theme">Making a theme</h5>
+<p>When your editing your custom theme it&#39;s recommended to only style elements like <code>p</code> or <code>a</code> etc. Don&#39;t apply any styling to <code>div</code> elements for example. This will mess up your theme. </p>
+<blockquote>
+<p>Note: you <strong>can</strong> apply styling to the <code>.wrapper</code> element, which is wrapped around all content.</p>
+</blockquote>
+<p>To enable syntax highlighting in your theme you can copy over css from some pre-made syntax highlighting stylesheets in the <code>/themes/hl/</code> folder.</p>
+<p>To select your theme in the editor you must save it in the <code>C:\[path to app]\themes</code> folder.</p>
+<h3 id="printing">Printing</h3>
+<p>You can print using the <code>Ctrl + P</code> shortcut or via the <code>File</code> menu. If you have Adobe Acrobat installed you can also print to PDF.</p>
+<h5 id="page-breaks">Page breaks</h5>
+<p>To insert a page break you can type <code>{Page break}</code> or <code>{PB}</code>. This will force the printer to start a new page. It will be visible as a dashed line <strong>only</strong> in the preview window.</p>
+<h3 id="searching">Searching</h3>
+<p>Start searching: <code>Ctrl + F</code><br>Find next: <code>Ctrl + G</code><br>Find previous: <code>Ctrl + Shift + G</code><br>Replace: <code>Ctrl + Shift + F</code><br>Replace all: <code>Ctrl + Shift + R</code></p>
+<p>To remove a search query use <code>Ctrl + F + Enter</code>.</p>
+<h3 id="other-tips">Other tips</h3>
+<ul>
+<li>Press F11 to go into full-screen mode, and F12 to go into zen-mode, write without any distractions. (Escape to exit both).</li>
+<li>To hide the live preview, press <code>Ctrl + Shift + P</code>.</li>
+<li>Press F9 to show/hide line numbers.</li>
+<li>Learn the shortcuts instead of using the editing-toolbar! This will make editing a lot faster.</li>
+<li><a href="https://tools.google.com/dlpage/drive">Install Google Drive</a>. This will create a folder on your computer wich will automatically sync with Google Drive.</li>
+</ul>
+</div></body></html>

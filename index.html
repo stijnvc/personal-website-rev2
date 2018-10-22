@@ -1,0 +1,46 @@
+---
+layout: homepage
+---
+
+<div class="fade"><p class="homepage-description">I am a designer currently studying Industrial Product Design at the HAN University of Applied Sciences. This is a selection of my work from various creative fields.</p>
+</div>{% for item in site.fp-collection %}
+<article class="fade">
+  <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
+    {% if item.video %}
+    <video autoplay loop muted poster="{{ site.baseurl }}/vid/{{ item.video }}/poster.jpg">
+       <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.mp4" type="video/mp4">
+       <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.webm" type="video/webm">
+    </video>
+    {% else %}
+      <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
+    {% endif %}
+    <div class="info clearfix">
+      <div class="description">
+        <h1>{{ item.title }}</h1>
+        <p>{{ item.description }}</p>
+      </div>
+      <div class="meta">
+        <p>{{ item.category }}</p>
+        <p>{{ item.year }}</p>
+      </div>
+    </div>
+  </a>
+</article>
+{% endfor %}
+<style>
+a.projects {
+  position: relative;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+  background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background: -ms-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  -webkit-background-size: 1px 1px;
+  -moz-background-size: 1px 1px;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 84%;
+}
+</style>
