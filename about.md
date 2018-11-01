@@ -5,7 +5,7 @@ description: About page.
 permalink: about
 ---
 
-![foto of stijn](/img/profile.jpg) <small>Me, stoking a fire in the wilderness of Romania.</small>
+<div class="profile-img-container"><p class="img"><img src="/img/profile.jpg" alt="foto of stijn" class="fade fade-in"> <small>Me, stoking a fire in the wilderness of Romania.</small></p></div>
 
 Stijn is a designer studying Industrial Product Design at the HAN University of Applied Sciences. He likes to practice
 his design approach in many different fields. The main focus lies on
@@ -45,15 +45,16 @@ Design inspiration: [Savee image board](https://savee.it/you/)
 >sep. 2015 – jan. 2016<br>
 >'s-Hertogenbosch, NL
 
+<link rel="stylesheet" href="/css/style-inv.min.css">
 <style>
 a.about {
   position: relative;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: -ms-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  background: -webkit-linear-gradient(#fff, #fff);
+  background: -moz-linear-gradient(#fff, #fff);
+  background: -o-linear-gradient(#fff, #fff);
+  background: -ms-linear-gradient(#fff, #fff);
+  background: linear-gradient(#fff, #fff);
   -webkit-background-size: 1px 1px;
   -moz-background-size: 1px 1px;
   background-size: 1px 1px;
