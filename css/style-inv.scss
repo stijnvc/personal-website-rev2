@@ -5,7 +5,7 @@ $light: rgba(255,255,255,.6);
 $dark: rgba(255,255,255,1);
 $accent: #EF4028;
 
-@media (min-aspect-ratio: 16/9) {
+@media (min-aspect-ratio: 16/9) and (min-width: 1000px){
   #page #main div.profile-img-container {
     position: fixed;
     left: 0;
