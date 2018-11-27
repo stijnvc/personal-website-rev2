@@ -3,17 +3,25 @@ layout: homepage
 ---
 
 <div class="fade"><p class="homepage-description">I am a designer currently studying Industrial Product Design at the HAN University of Applied Sciences. This is a selection of my work from various creative fields.</p>
-</div>{% for item in site.fp-collection %}
-<article class="fade">
+</div>
+<div class="fade categories">
+  <h3>Categories:</h3>
+  <a class="selected" href="#" cat-id="all">All</a><span>/</span><a href="#" cat-id="id">Industrial Design</a><span>/</span><a href="#" cat-id="graphic">Graphic Design</a><span>/</span><a href="#" cat-id="ui">UI Design</a><span>/</span><a href="#" cat-id="webdev">Web Development</a><span>/</span><a href="#" cat-id="other">Other</a>
+</div>
+<div class="fade">
+{% for item in site.fp-collection %}
+<article class="clearfix {{ item.category-id }} visible">
   <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
-    {% if item.video %}
-    <video autoplay loop muted poster="{{ site.baseurl }}/vid/{{ item.video }}/poster.jpg">
-       <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.mp4" type="video/mp4">
-       <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.webm" type="video/webm">
-    </video>
-    {% else %}
-      <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
-    {% endif %}
+    <div class="thumb">
+      {% if item.video %}
+      <video autoplay loop muted poster="{{ site.baseurl }}/vid/{{ item.video }}/poster.jpg">
+         <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.mp4" type="video/mp4">
+         <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.webm" type="video/webm">
+      </video>
+      {% else %}
+        <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
+      {% endif %}
+    </div>
     <div class="info clearfix">
       <div class="description">
         <h1>{{ item.title }}</h1>
@@ -27,6 +35,20 @@ layout: homepage
   </a>
 </article>
 {% endfor %}
+</div>
+<script>
+  $(document).on("click", ".categories a", function(e) {
+    e.preventDefault();
+    $(".categories a").removeClass("selected");
+    $(this).addClass("selected");
+    if($(this).attr("cat-id") == "all"){
+      $("article").addClass("visible");
+    }else{
+      $("article").removeClass("visible");
+      $("article." + $(this).attr("cat-id")).addClass("visible");
+    }
+  });
+</script>
 <style>
 a.projects {
   position: relative;
@@ -41,6 +63,6 @@ a.projects {
   background-size: 1px 1px;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  background-position: 0 84%;
+  background-position: 0 89%;
 }
 </style>

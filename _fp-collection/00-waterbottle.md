@@ -5,6 +5,7 @@ thumbnail: drinkfles-mk3-thumb.jpg
 permalink: revolve-waterbottle
 year: 2017
 category: Industrial Design / Packaging
+category-id: id
 ---
 
 
@@ -72,7 +73,7 @@ Testing a 3D printed prototype in different environments.
 ![Filling the bottle and filtration visualization](/img/portfolio/drinkfles-2/filling-min.jpg)
 
 ![Parts overview](/img/portfolio/drinkfles-2/parts-min.jpg)
- 
+
 ## Packaging Concept
 
 ![Packaging visualization](/img/portfolio/drinkfles-2/packaging-min.jpg)

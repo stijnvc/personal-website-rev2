@@ -4,6 +4,22 @@ $xlight: rgba(0,0,0,.03);
 $light: rgba(0,0,0,.6);
 $dark: rgba(0,0,0,1);
 $accent: #EF4028;
+%underline {
+  position: relative;
+  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
+  background: -webkit-linear-gradient($dark, $dark);
+  background: -moz-linear-gradient($dark, $dark);
+  background: -o-linear-gradient($dark, $dark);
+  background: -ms-linear-gradient($dark, $dark);
+  background: linear-gradient($dark, $dark);
+  -webkit-background-size: 1px 1px;
+  -moz-background-size: 1px 1px;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  background-size: 1px 1px;
+  background-position: 0 89%;
+}
+
 
 ::selection {
   background: $accent;
@@ -280,19 +296,7 @@ header {
       font-weight: 300;
     }
     a:hover {
-      position: relative;
-      text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
-      background: -webkit-linear-gradient($dark, $dark);
-      background: -moz-linear-gradient($dark, $dark);
-      background: -o-linear-gradient($dark, $dark);
-      background: -ms-linear-gradient($dark, $dark);
-      background: linear-gradient($dark, $dark);
-      -webkit-background-size: 1px 1px;
-      -moz-background-size: 1px 1px;
-      background-size: 1px 1px;
-      background-repeat: repeat-x;
-      background-size: 1px 1px;
-      background-position: 0 84%;
+      @extend %underline;
     }
   }
 }
@@ -302,18 +306,28 @@ p.homepage-description {
   color: $light;
   opacity: .9;
 }
-.fade {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-.fade-in {
-  opacity: 1;
-}
 #homepage {
+  .categories {
+    h3 {
+      color: $light;
+    }
+    span {
+      color: $light;
+      display: inline-block;
+      padding: 0 10px;
+    }
+    a {
+      display: inline-block;
+    }
+    a.selected, a:hover {
+      @extend %underline;
+    }
+    padding-bottom: 2em;
+  }
   article {
-    margin: 2em 0;
     .info {
       margin-top: .5em;
+      padding-bottom: 2em;
       color: $light;
       transition: color 0.5s ease;
       .description {
@@ -338,7 +352,7 @@ p.homepage-description {
     img, video {
       filter: brightness(98%);
       -webkit-filter: brightness(98%);
-      transition: filter 0.5s ease;
+      transition: filter 0.5s ease, opacity .3s ease;
     }
   }
   article:hover {
@@ -350,6 +364,24 @@ p.homepage-description {
       color: $dark;
     }
   }
+  // CATEGORY ANIMATIONS
+  article {
+    transition: max-height .5s ease, opacity .5s ease;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    img, video {
+      opacity: 0;
+    }
+  }
+  article.visible {
+    opacity: 1;
+    max-height: 750px;
+    img, video {
+      opacity: 1;
+    }
+  }
+
 }
 #page {
   #main {
@@ -385,19 +417,7 @@ p.homepage-description {
       color: $dark;
     }
     a:hover {
-      position: relative;
-      text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
-      background: -webkit-linear-gradient($dark, $dark);
-      background: -moz-linear-gradient($dark, $dark);
-      background: -o-linear-gradient($dark, $dark);
-      background: -ms-linear-gradient($dark, $dark);
-      background: linear-gradient($dark, $dark);
-      -webkit-background-size: 1px 1px;
-      -moz-background-size: 1px 1px;
-      background-size: 1px 1px;
-      background-repeat: repeat-x;
-      background-size: 1px 1px;
-      background-position: 0 89%;
+      @extend %underline;
     }
     hr {
       margin: 0;
@@ -407,6 +427,15 @@ p.homepage-description {
       border: none;
       margin: 3em 0;
     }
+    .scrolling-image {
+      width: 100%;
+      overflow-x: scroll;
+      img {
+        width: auto;
+        max-width: none;
+        height: 80vh;
+      }
+    }
   }
 }
 footer {
@@ -415,4 +444,11 @@ footer {
     max-width: none;
     color: $light;
   }
+}
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.fade-in {
+  opacity: 1;
 }

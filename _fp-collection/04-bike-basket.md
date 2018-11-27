@@ -5,6 +5,7 @@ thumbnail: bike-basket.jpg
 permalink: bike-basket
 year: 2016
 category: Industrial Design
+category-id: id
 ---
 
 

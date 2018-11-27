@@ -64,6 +64,6 @@ a.about {
   background-size: 1px 1px;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  background-position: 0 84%;
+  background-position: 0 89%; 
 }
 </style>

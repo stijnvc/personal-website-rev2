@@ -6,6 +6,7 @@ thumbnail: portfolio/nota-1.png
 permalink: nota-markdown-editor
 year: 2014
 category: UI Design / Development
+category-id: ui webdev
 ---
 
 [Download v0.2.2 (ZIP, 16.9 MB) for Windows](/download/nota_0.2.2_setup_and_guide.zip).

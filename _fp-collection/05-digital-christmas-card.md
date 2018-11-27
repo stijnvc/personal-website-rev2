@@ -5,6 +5,7 @@ video: kerstvertelling
 permalink: digital-christmas-card
 year: 2015
 category: Graphic Design / Web Development
+category-id: graphic webdev
 ---
 
 During my internship at [Smaac](https://smaac.nl/) I designed and developed a Year In Review
