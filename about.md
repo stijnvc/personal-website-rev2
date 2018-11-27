@@ -7,11 +7,15 @@ permalink: about
 
 <div class="profile-img-container"><p class="img"><img src="/img/profile.jpg" alt="foto of stijn" class="fade fade-in"> <small>Me, stoking a fire in the wilderness of Romania.</small></p></div>
 
-Stijn is a designer studying Industrial Product Design at the HAN University of Applied Sciences. He likes to practice
-his design approach in many different fields. The main focus lies on
+I believe there is not just one right approach in design. Each project
+challenges you to look at the surrounding factors and environment. I strive
+towards simplicity and clarity in my designs. Solutions appropriate to
+situations. In finding these solutions I don't limit myself to one discipline
+within design, I take a multidisciplinary approach. The main focus lies on
 the process and a way of thinking. Everything can be designed.
 
-Currently enrolled in [Co-Design Studio](http://codesignstudio.strikingly.com/), a
+In 2014 I started studying Industrial Product Design at HAN University of
+Applied Sciences. I am currently enrolled in [Co-Design Studio](http://codesignstudio.strikingly.com/), a
 full-time minor in human centered design, working for real clients with
 coaching by experienced design professionals.
 
