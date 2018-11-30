@@ -2,7 +2,7 @@
 title: Markdown Editor
 call-to-action: Learn more & download
 description: A Windows Markdown editor for distraction free writing. Built on web technologies.
-thumbnail: portfolio/nota-1.png
+thumbnail: nota.png
 permalink: nota-markdown-editor
 year: 2014
 category: UI Design / Development

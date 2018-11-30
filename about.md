@@ -4,22 +4,17 @@ title: About
 description: About page.
 permalink: about
 ---
-
-<div class="profile-img-container"><p class="img"><img src="/img/profile.jpg" alt="foto of stijn" class="fade fade-in"> <small>Me, stoking a fire in the wilderness of Romania.</small></p></div>
-
-I believe there is not just one right approach in design. Each project
-challenges you to look at the surrounding factors and environment. I strive
-towards simplicity and clarity in my designs. Solutions appropriate to
-situations. In finding these solutions I don't limit myself to one discipline
-within design, I take a multidisciplinary approach. The main focus lies on
-the process and a way of thinking. Everything can be designed.
+I strive towards simplicity and clarity in my designs. To achieve this I start by looking at the surrounding factors and environment. In finding solutions I don't limit myself to one discipline within design, I take a multidisciplinary approach. Solutions appropriate to situations. The main focus lies on the process and a way of thinking. Everything can be designed.
 
 In 2014 I started studying Industrial Product Design at HAN University of
 Applied Sciences. I am currently enrolled in [Co-Design Studio](http://codesignstudio.strikingly.com/), a
 full-time minor in human centered design, working for real clients with
 coaching by experienced design professionals.
 
-[contact@stijn.vc](mailto:contact@stijn.vc)
+Get in touch: [contact@stijn.vc](mailto:contact@stijn.vc)
+
+
+<div class="profile-img-container"><p class="img"><img src="/img/profile.jpg" alt="foto of stijn" class="fade fade-in"> <small>Me, stoking a fire in the wilderness of Romania.</small></p></div>
 
 ## On The Web
 
@@ -64,6 +59,6 @@ a.about {
   background-size: 1px 1px;
   background-repeat: repeat-x;
   background-size: 1px 1px;
-  background-position: 0 89%; 
+  background-position: 0 89%;
 }
 </style>

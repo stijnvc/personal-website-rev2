@@ -32,6 +32,9 @@ $accent: #EF4028;
   display: table;
   clear: both;
 }
+.noselect {
+  user-select: none;
+}
 
 /*FREIGHT NEO*/
 
@@ -244,7 +247,7 @@ h1, h2, h3 {
 }
 p {
   margin: 0;
-  max-width: 600px;
+  max-width: 550px;
 }
 blockquote {
   max-width: 600px;
@@ -257,9 +260,12 @@ img, video {
   display: block;
   max-width: 100%;
 }
+img {
+  image-rendering: crisp-edges;
+}
 
 .wrapper {
-  max-width: 900px;
+  max-width: 1100px;
   min-width: 600px;
   margin: 0 auto;
 }
@@ -318,16 +324,22 @@ p.homepage-description {
     }
     a {
       display: inline-block;
+      padding: 0 4px 2px 4px;
+      border-radius: 3px;
     }
-    a.selected, a:hover {
-      @extend %underline;
+    a:hover {
+      background: $xlight;
+    }
+    a.selected {
+      color: $white;
+      background: $dark;
     }
     padding-bottom: 2em;
   }
   article {
     .info {
       margin-top: .5em;
-      padding-bottom: 2em;
+      padding-bottom: 3em;
       color: $light;
       transition: color 0.5s ease;
       .description {
@@ -350,6 +362,7 @@ p.homepage-description {
       }
     }
     img, video {
+      width: 100%;
       filter: brightness(98%);
       -webkit-filter: brightness(98%);
       transition: filter 0.5s ease, opacity .3s ease;
@@ -376,7 +389,7 @@ p.homepage-description {
   }
   article.visible {
     opacity: 1;
-    max-height: 750px;
+    max-height: 1000px;
     img, video {
       opacity: 1;
     }
@@ -434,6 +447,7 @@ p.homepage-description {
         width: auto;
         max-width: none;
         height: 80vh;
+        min-height: 610px;
       }
     }
   }
