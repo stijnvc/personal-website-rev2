@@ -267,6 +267,7 @@ img, video {
   max-width: 100%;
 }
 img {
+  image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
 
@@ -432,6 +433,7 @@ p.homepage-description {
       max-width: 100%;
       img {
         filter: brightness(98%);
+        max-height: 98vh;
       }
     }
     p.video {
