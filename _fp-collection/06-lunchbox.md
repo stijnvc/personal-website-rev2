@@ -9,7 +9,7 @@ category-id: id
 ---
 
 
-A lot of plastic lunchboxes look just like that: plastic boxes. Plastic lunchboxes do have the great advantage of being nearly unbreakable, light, dishwasher safe and microwave safe. But why not design it more like actual tableware? I set out to design a lunchbox that has the esthetic like it could be made out of ceramics.
+A lot of plastic lunchboxes look just like that: plastic boxes. Plastic lunchboxes do have the great advantage of being nearly unbreakable, light, dishwasher safe and microwave safe. But why not design it more like actual tableware? I set out to design a lunchbox that has an esthetic similar to what a ceramic piece of tableware could have.
 
 ![inspiration](/img/portfolio/lunchbox-inspiration.jpg) <small>I drew inspiration from elegant ceramic tableware.</small>
 
