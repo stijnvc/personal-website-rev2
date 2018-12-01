@@ -40,6 +40,6 @@ Creating solutions for such a sensitive topic can be tricky. We have created thi
 
 ## Read Booklet
 
-<div class="scrolling-image">
+<div class="scrolling-image dragscroll">
 <img src="/img/portfolio/omar-booklet.jpg">
 </div>

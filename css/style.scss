@@ -236,6 +236,12 @@ body {
   font-weight: 300;
   color: $dark;
   padding: 0 1em;
+  @media (max-width: 450px){
+    font-size: 20px;
+  }
+  @media (max-width: 340px){
+    font-size: 18px;
+  }
 }
 html {
   overflow-y: scroll;
@@ -266,7 +272,6 @@ img {
 
 .wrapper {
   max-width: 1100px;
-  min-width: 600px;
   margin: 0 auto;
 }
 .wrapper::after {
@@ -305,6 +310,20 @@ header {
       @extend %underline;
     }
   }
+  @media (max-width: 450px){
+    .title, nav {
+      float: none;
+      width: 100%;
+      text-align: center;
+    }
+    nav {
+      margin-top: .5em;
+      a {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+    }
+  }
 }
 p.homepage-description {
   max-width: 100%;
@@ -335,24 +354,38 @@ p.homepage-description {
       background: $dark;
     }
     padding-bottom: 2em;
+    .scroll-box {
+      overflow-x: auto;
+    }
+    .scroll-inner {
+      padding: .2em 0;
+      white-space:nowrap;
+      width: auto;
+      float: left;
+      text-align: center;
+    }
+  }
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-right: -1em;
   }
   article {
+    width: 45%;
+    max-width: calc(50% - 1em);
+    flex-grow: 1;
+    margin-right: 1em;
+    @media (max-width: 740px) {
+      max-width: none;
+      width: 80%;
+    }
     .info {
+      font-size: .8em;
       margin-top: .5em;
-      padding-bottom: 3em;
+      padding-bottom: 2em;
       color: $light;
       transition: color 0.5s ease;
-      .description {
-        width: 50%;
-        float: left;
-        padding-right: 5px;
-      }
-      .meta {
-        width: 50%;
-        float: right;
-        padding-left: 5px;
-        text-align: right;
-      }
       h1 {
         color: $dark;
         font-weight: 400;
@@ -379,20 +412,10 @@ p.homepage-description {
   }
   // CATEGORY ANIMATIONS
   article {
-    transition: max-height .5s ease, opacity .5s ease;
-    overflow: hidden;
-    max-height: 0;
-    opacity: 0;
-    img, video {
-      opacity: 0;
-    }
+    display: none;
   }
   article.visible {
-    opacity: 1;
-    max-height: 1000px;
-    img, video {
-      opacity: 1;
-    }
+    display: block;
   }
 
 }
@@ -443,6 +466,7 @@ p.homepage-description {
     .scrolling-image {
       width: 100%;
       overflow-x: scroll;
+      cursor: move;
       img {
         width: auto;
         max-width: none;

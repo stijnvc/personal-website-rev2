@@ -6,6 +6,7 @@ permalink: revolve-waterbottle
 year: 2017
 category: Industrial Design / Packaging
 category-id: id
+flex: large
 ---
 
 

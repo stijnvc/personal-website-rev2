@@ -13,7 +13,9 @@ category-id: video systemic
 
 This is the result of a 3 day 'pressure cooker' assignment from [Co-Design Studio](http://codesignstudio.strikingly.com/) during International Week. We went on a trip to Turku (in Finland) to help HUB Turku, a downtown co-working & makerspace, with their idea for a material library.
 
-This video explains our concept:
+## Video
+
+This video explains our concept.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NoyS93Inb2o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

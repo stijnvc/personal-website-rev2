@@ -6,11 +6,15 @@ layout: homepage
 </div>
 <div class="fade noselect categories">
   <h3>Categories:</h3>
-  <a class="selected" href="#" cat-id="all">All</a><span>/</span><a href="#" cat-id="id">Industrial Design</a><span>/</span><a href="#" cat-id="graphic">Graphic Design</a><span>/</span><a href="#" cat-id="systemic">Systemic Design</a><span>/</span><a href="#" cat-id="ui">UI Design</a><span>/</span><a href="#" cat-id="webdev">Web Development</a><span>/</span><a href="#" cat-id="video">Video</a>
+  <div class="scroll-box clearfix">
+    <div class="scroll-inner">
+      <a class="selected" href="#" cat-id="all">All</a><span>/</span><a href="#" cat-id="id">Industrial Design</a><span>/</span><a href="#" cat-id="graphic">Graphic Design</a><span>/</span><a href="#" cat-id="systemic">Systemic Design</a><span>/</span><a href="#" cat-id="ui">UI Design</a><span>/</span><a href="#" cat-id="webdev">Web Development</a><span>/</span><a href="#" cat-id="video">Video</a>
+    </div>
+  </div>
 </div>
-<div class="fade">
+<div class="fade flex-container">
 {% for item in site.fp-collection %}
-<article class="clearfix {{ item.category-id }} visible">
+<article class="clearfix fade flex-{{ item.flex }} {{ item.category-id }} visible">
   <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
     <div class="thumb">
       {% if item.video %}
@@ -25,7 +29,7 @@ layout: homepage
     <div class="info clearfix">
       <div class="description">
         <h1>{{ item.title }}</h1>
-        <p>{{ item.description }}</p>
+        <!-- <p>{{ item.description }}</p> -->
       </div>
       <div class="meta">
         <p>{{ item.category }}</p>
