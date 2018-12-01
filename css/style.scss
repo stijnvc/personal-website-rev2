@@ -38,33 +38,33 @@ $accent: #EF4028;
 
 /*FREIGHT NEO*/
 
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-LightItalic.woff') format('woff');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-SemiboldItalic.woff') format('woff');
-	font-weight: 600;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-Light.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-Black.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-}
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-LightItalic.woff') format('woff');
+// 	font-weight: 300;
+// 	font-style: italic;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-SemiboldItalic.woff') format('woff');
+// 	font-weight: 600;
+// 	font-style: italic;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-Light.woff') format('woff');
+// 	font-weight: 300;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-Black.woff') format('woff');
+// 	font-weight: 900;
+// 	font-style: normal;
+// }
 
 @font-face {
 	font-family: 'Freight Neo Pro';
@@ -72,93 +72,93 @@ $accent: #EF4028;
 	font-weight: 600;
 	font-style: normal;
 }
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-Bold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-Book.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-MediumItalic.woff') format('woff');
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-BoldItalic.woff') format('woff');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-BlackItalic.woff') format('woff');
-	font-weight: 900;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-BookItalic.woff') format('woff');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-Medium.woff') format('woff');
-	font-weight: 500;
-	font-style: normal;
-}
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-Bold.woff') format('woff');
+// 	font-weight: bold;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-Book.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-MediumItalic.woff') format('woff');
+// 	font-weight: 500;
+// 	font-style: italic;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-BoldItalic.woff') format('woff');
+// 	font-weight: bold;
+// 	font-style: italic;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-BlackItalic.woff') format('woff');
+// 	font-weight: 900;
+// 	font-style: italic;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-BookItalic.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: italic;
+// }
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-Medium.woff') format('woff');
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
 
 
 // AKZIDENZ GROTESK
 
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-ExtraLightIt.woff') format('woff');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-Italic.woff') format('woff');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-BlackIt.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-ExtraBoldIt.woff') format('woff');
-    font-weight: 800;
-    font-style: italic;
-}
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-ExtraLightIt.woff') format('woff');
+//     font-weight: 200;
+//     font-style: italic;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-ExtraLight.woff') format('woff');
+//     font-weight: 200;
+//     font-style: normal;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-Italic.woff') format('woff');
+//     font-weight: 400;
+//     font-style: italic;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-BlackIt.woff') format('woff');
+//     font-weight: 900;
+//     font-style: italic;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-ExtraBoldIt.woff') format('woff');
+//     font-weight: 800;
+//     font-style: italic;
+// }
 
 @font-face {
     font-family: 'Akzidenz Grotesk Next';
@@ -167,26 +167,26 @@ $accent: #EF4028;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-Bold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-MedIt.woff') format('woff');
-    font-weight: 500;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-Med.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-Bold.woff') format('woff');
+//     font-weight: 600;
+//     font-style: normal;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-MedIt.woff') format('woff');
+//     font-weight: 500;
+//     font-style: italic;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-Med.woff') format('woff');
+//     font-weight: 500;
+//     font-style: normal;
+// }
 
 @font-face {
     font-family: 'Akzidenz Grotesk Next';
@@ -195,33 +195,33 @@ $accent: #EF4028;
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('fonts/AkzidGrtskNext-LightItalic.woff') format('woff');
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('AkzidGrtskNext-ExtraBold.woff') format('woff');
-    font-weight: 800;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('AkzidGrtskNext-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Akzidenz Grotesk Next';
-    src: url('AkzidGrtskNext-BoldIt.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('fonts/AkzidGrtskNext-LightItalic.woff') format('woff');
+//     font-weight: 300;
+//     font-style: italic;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('AkzidGrtskNext-ExtraBold.woff') format('woff');
+//     font-weight: 800;
+//     font-style: normal;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('AkzidGrtskNext-Black.woff') format('woff');
+//     font-weight: 900;
+//     font-style: normal;
+// }
+//
+// @font-face {
+//     font-family: 'Akzidenz Grotesk Next';
+//     src: url('AkzidGrtskNext-BoldIt.woff') format('woff');
+//     font-weight: 600;
+//     font-style: italic;
+// }
 
 
 
@@ -230,7 +230,7 @@ $accent: #EF4028;
 }
 body {
   background-color: $white;
-  font-family: "Akzidenz Grotesk Next";
+  font-family: "Akzidenz Grotesk Next", sans-serif;
   font-size: 22px;
   line-height: 1.4;
   font-weight: 300;
@@ -291,7 +291,7 @@ header {
     float: left;
     width: 50%;
     h1 {
-      font-family: "Freight Neo Pro";
+      font-family: "Freight Neo Pro", sans-serif;
       font-weight: 600;
       font-size: 1.3em;
       display: block;
