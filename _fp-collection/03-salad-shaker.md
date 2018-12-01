@@ -44,7 +44,7 @@ For me this was the first time I got to manage a project from sketch to final pr
 
 ---
 
-I worked on the Salad Shaker during my internship together with the great people from [Smaac](https://smaac.nl/). You can view this project [on their website](https://smaac.nl/cases/product-design_bonduelle_salad-shaker/).
+I worked on the Salad Shaker as a member of the design team at [Smaac](https://smaac.nl/). You can view this project [on their website](https://smaac.nl/cases/product-design_bonduelle_salad-shaker/).
 
 The contact person for this project is Alex de Winter ([alex@smaac.nl](mailto:alex@smaac.nl),
 +31 (0) 73 610 07 89).
