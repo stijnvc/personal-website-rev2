@@ -18,7 +18,7 @@ cv:
 
 # The URL of the homepage of your site (without trailing slash). Leave this
 # empty when you run Jekyll locally.
-url: https://stijn.vc
+url: https://stijnvancuijk.com
 baseurl: ""
 
 collections:
