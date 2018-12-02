@@ -28,7 +28,7 @@ Within 3 days: Aligning with client > Defining project outline and design questi
    <source src="/vid/material-library/video-2.webm" type="video/webm">
 </video></p>
 
-<p><video autoplay loop muted poster="/vid/material-library/poster.jpg">
+<p><video autoplay loop muted poster="/vid/material-library/poster-3.jpg">
    <source src="/vid/material-library/video-3.mp4" type="video/mp4">
    <source src="/vid/material-library/video-3.webm" type="video/webm">
 </video></p>
