@@ -33,7 +33,7 @@ Designed in 2018 during my internship at Studio Mango.
 
 ![Office Planter Concepts](/img/portfolio/office-planter_concept_03.jpg)
 
-Designed in 2018 during my internship at GBO.
+Designed in 2017 during my internship at GBO.
 
 ---
 
