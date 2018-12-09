@@ -1,6 +1,6 @@
 
 $white: rgba(255,255,255,1);
-$xlight: rgba(0,0,0,.03);
+$xlight: rgba(0,0,0,.05);
 $light: rgba(0,0,0,.6);
 $dark: rgba(0,0,0,1);
 $accent: #EF4028;
@@ -272,7 +272,7 @@ img {
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 .wrapper::after {
@@ -334,36 +334,42 @@ p.homepage-description {
 }
 #homepage {
   .categories {
+    padding-bottom: 2em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1em;
+    font-size: .65em;
     h3 {
       color: $light;
-    }
-    span {
-      color: $light;
-      display: inline-block;
-      padding: 0 10px;
+      margin-bottom: 5px;
     }
     a {
+      //font-size: .8em;
       display: inline-block;
-      padding: 0 4px 2px 4px;
-      border-radius: 3px;
+      padding: 12px 20px;
+      //border-right: 1px solid $xlight;
+      margin: 0;
+      background: $white;
+      margin-right: 1px;
     }
     a:hover {
-      background: $xlight;
+      
     }
     a.selected {
-      color: $white;
-      background: $dark;
+      background: transparent;
     }
-    padding-bottom: 2em;
     .scroll-box {
       overflow-x: auto;
+      border: 1px solid $xlight;
     }
     .scroll-inner {
-      padding: .2em 0;
-      white-space:nowrap;
+      padding: 0;
+      white-space: nowrap;
       width: auto;
       float: left;
       text-align: center;
+      line-height: 1;
+      background: $xlight;
     }
   }
   .flex-container {
