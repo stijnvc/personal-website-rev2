@@ -5,7 +5,7 @@ thumbnail: salad-shaker-thumb.jpg
 permalink: salad-shaker
 year: 2017
 category: Industrial Design
-category-id: id
+category-id: industrial-design
 ---
 
 Designed at [Smaac](https://smaac.nl/) in ‘s-Hertogenbosch.

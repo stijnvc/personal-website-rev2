@@ -6,7 +6,7 @@ video: material-library
 permalink: material-library
 year: 2018
 category: Systemic Design / Video Production
-category-id: video systemic
+category-id: video systemic-design
 ---
 
 ![video setup](/img/portfolio/map.jpg)

@@ -5,7 +5,7 @@ thumbnail: midi-controller-thumb.jpg
 permalink: arduino-midi-controller
 year: 2018
 category: Industrial Design / Personal Project
-category-id: id video
+category-id: industrial-design video
 ---
 
 ![hero photo](/img/portfolio/midi-controller.jpg)

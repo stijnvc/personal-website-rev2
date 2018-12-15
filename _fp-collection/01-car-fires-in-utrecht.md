@@ -5,7 +5,7 @@ thumbnail: car-fires.jpg
 permalink: car-fires-in-utrecht
 year: 2018
 category: Graphic Design / Systemic Design
-category-id: graphic systemic
+category-id: graphic-design systemic-design
 ---
 
 ![Caar Fire illustration](/img/portfolio/car-fire.jpg) <small>Illustrations by <a href="http://madelyncapozzi.com/">Madelyn Capozzi</a>.</small>

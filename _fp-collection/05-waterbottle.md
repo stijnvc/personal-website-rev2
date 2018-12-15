@@ -5,7 +5,7 @@ thumbnail: drinkfles-mk3-thumb.jpg
 permalink: revolve-waterbottle
 year: 2017
 category: Industrial Design / Packaging
-category-id: id
+category-id: industrial-design
 flex: large
 ---
 

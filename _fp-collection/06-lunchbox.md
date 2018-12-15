@@ -5,7 +5,7 @@ thumbnail: lunchbox.jpg
 permalink: lunchbox
 year: 2017
 category: Industrial Design
-category-id: id
+category-id: industrial-design
 ---
 
 

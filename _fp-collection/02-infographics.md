@@ -5,7 +5,7 @@ thumbnail: thumbnail-posters.jpg
 permalink: accreditation-infographics
 year: 2018
 category: Graphic Design
-category-id: graphic
+category-id: graphic-design
 ---
 
 I designed two infographics for the accreditation of HAN Industrial Product Design. One displaying the newly developed curriculum and the other visualizing the graduation process

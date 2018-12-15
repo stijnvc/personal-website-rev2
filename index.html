@@ -8,13 +8,13 @@ layout: homepage
   <h3>Filter by Creative Field:</h3>
   <div class="scroll-box clearfix">
     <div class="scroll-inner">
-      <a class="selected" href="#" cat-id="all">All</a><a href="#" cat-id="id">Industrial Design</a><a href="#" cat-id="graphic">Graphic Design</a><a href="#" cat-id="systemic">Systemic Design</a><a href="#" cat-id="ui">UI Design</a><a href="#" cat-id="webdev">Web Development</a><a href="#" cat-id="video">Video</a>
+      <a class="selected" href="#" cat-id="all">All</a><a href="#industrial-design" cat-id="industrial-design">Industrial Design</a><a href="#graphic-design" cat-id="graphic-design">Graphic Design</a><a href="#systemic-design" cat-id="systemic-design">Systemic Design</a><a href="#ui-design" cat-id="ui-design">UI Design</a><a href="#web-development" cat-id="web-development">Web Development</a><a href="#video" cat-id="video">Video</a>
     </div>
   </div>
 </div>
-<div class="fade flex-container">
+<div class="fade flex-container portfolio-items">
 {% for item in site.fp-collection %}
-<article class="clearfix fade flex-{{ item.flex }} {{ item.category-id }} visible">
+<article class="clearfix fade flex-{{ item.flex }} {{ item.category-id }}">
   <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
     <div class="thumb">
       {% if item.video %}
@@ -41,32 +41,40 @@ layout: homepage
 {% endfor %}
 </div>
 <script>
+
+  function catUpdate(catId){
+    $(".categories a").removeClass("selected");
+    if(catId !== ""){
+      $("[cat-id="+catId+"]").addClass("selected");
+      if(catId == "all"){
+        $("article").removeClass("hidden");
+      }else{
+        $("article").addClass("hidden");
+        $("article." + catId).removeClass("hidden");
+      }
+    }else{
+      $("[cat-id=all]").addClass("selected");
+    }
+  }
+
+  var hash = location.hash.substr(1);
+  catUpdate(hash);
+
   $(document).on("click", ".categories a", function(e) {
     e.preventDefault();
-    $(".categories a").removeClass("selected");
-    $(this).addClass("selected");
-    if($(this).attr("cat-id") == "all"){
-      $("article").addClass("visible");
-    }else{
-      $("article").removeClass("visible");
-      $("article." + $(this).attr("cat-id")).addClass("visible");
+    catId = $(this).attr("cat-id");
+    if(history.pushState) {
+      history.pushState(null, null, '#' + catId);
     }
+    else {
+      location.hash = '#' + catId;
+    }
+    catUpdate(catId);
   });
+
 </script>
 <style>
 a.projects {
-  position: relative;
-  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
-  background: -webkit-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: -moz-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: -o-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: -ms-linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  background: linear-gradient(rgba(0,0,0,1), rgba(0,0,0,1));
-  -webkit-background-size: 1px 1px;
-  -moz-background-size: 1px 1px;
-  background-size: 1px 1px;
-  background-repeat: repeat-x;
-  background-size: 1px 1px;
-  background-position: 0 89%;
+  text-decoration: underline;
 }
 </style>

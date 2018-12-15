@@ -5,7 +5,7 @@ thumbnail: misc.jpg
 permalink: misc-projects
 year: 2014 — present
 category: Industrial Design
-category-id: id
+category-id: industrial-design
 ---
 
  Miscellaneous Industrial Design projects dating from 2014 to present, sorted by newest first.

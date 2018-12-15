@@ -1,9 +1,13 @@
 
-$white: rgba(255,255,255,1);
-$xlight: rgba(0,0,0,.05);
-$light: rgba(0,0,0,.6);
-$dark: rgba(0,0,0,1);
-$accent: #EF4028;
+$white: rgba(255, 255, 255,1);
+$xlight: rgba(255, 227, 211,.4);
+$light: rgba(8,7,8,.6);
+$dark: rgba(8,7,8,1);
+$accent-light: rgba(237, 211, 196,.5);
+$accent-dark: rgba(119, 101, 227,1);
+//rgba(17,17,17,1);
+$link: rgba( 4, 52, 242,1);
+
 %underline {
   position: relative;
   text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
@@ -22,10 +26,10 @@ $accent: #EF4028;
 
 
 ::selection {
-  background: $accent;
+  background: $xlight;
 }
 ::-moz-selection {
-  background: $accent;
+  background: $xlight;
 }
 .clearfix:after {
   content: "";
@@ -65,13 +69,13 @@ $accent: #EF4028;
 // 	font-weight: 900;
 // 	font-style: normal;
 // }
-
-@font-face {
-	font-family: 'Freight Neo Pro';
-	src: url('fonts/FreightNeoPro-Semibold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-}
+//
+// @font-face {
+// 	font-family: 'Freight Neo Pro';
+// 	src: url('fonts/FreightNeoPro-Semibold.woff') format('woff');
+// 	font-weight: 600;
+// 	font-style: normal;
+// }
 //
 // @font-face {
 // 	font-family: 'Freight Neo Pro';
@@ -181,12 +185,12 @@ $accent: #EF4028;
 //     font-style: italic;
 // }
 //
-// @font-face {
-//     font-family: 'Akzidenz Grotesk Next';
-//     src: url('fonts/AkzidGrtskNext-Med.woff') format('woff');
-//     font-weight: 500;
-//     font-style: normal;
-// }
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Med.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'Akzidenz Grotesk Next';
@@ -204,24 +208,33 @@ $accent: #EF4028;
 //
 // @font-face {
 //     font-family: 'Akzidenz Grotesk Next';
-//     src: url('AkzidGrtskNext-ExtraBold.woff') format('woff');
+//     src: url('fonts/AkzidGrtskNext-ExtraBold.woff') format('woff');
 //     font-weight: 800;
 //     font-style: normal;
 // }
 //
-// @font-face {
-//     font-family: 'Akzidenz Grotesk Next';
-//     src: url('AkzidGrtskNext-Black.woff') format('woff');
-//     font-weight: 900;
-//     font-style: normal;
-// }
+
+@font-face {
+    font-family: 'Akzidenz Grotesk Next';
+    src: url('fonts/AkzidGrtskNext-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
 //
 // @font-face {
 //     font-family: 'Akzidenz Grotesk Next';
-//     src: url('AkzidGrtskNext-BoldIt.woff') format('woff');
+//     src: url('fonts/AkzidGrtskNext-BoldIt.woff') format('woff');
 //     font-weight: 600;
 //     font-style: italic;
 // }
+
+@font-face {
+    font-family: 'Stijn';
+    src: url('fonts/stijnbold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
 
 
 
@@ -233,7 +246,7 @@ body {
   font-family: "Akzidenz Grotesk Next", sans-serif;
   font-size: 22px;
   line-height: 1.4;
-  font-weight: 300;
+  font-weight: 400;
   color: $dark;
   padding: 0 1em;
   @media (max-width: 470px){
@@ -285,17 +298,16 @@ img {
   opacity: 0;
 }
 header {
-  font-size: 1.15em;
   margin-top: 1em;
+  border-bottom: 4px solid $xlight;
+  padding-bottom: 1em;
   .title {
     float: left;
     width: 50%;
     h1 {
-      font-family: "Freight Neo Pro", sans-serif;
-      font-weight: 600;
-      font-size: 1.3em;
+      font-weight: 400;
+      font-size: 1em;
       display: block;
-      margin-top: -.15em;
     }
   }
   nav {
@@ -305,10 +317,12 @@ header {
     a {
       display: inline-block;
       margin-left: 20px;
-      font-weight: 300;
+      font-weight: 400;
+      transition: color 0.2s ease;
     }
     a:hover {
-      @extend %underline;
+      color: $link;
+      //text-decoration: underline;
     }
   }
   @media (max-width: 450px){
@@ -329,39 +343,45 @@ header {
 p.homepage-description {
   max-width: 100%;
   margin: 1.2em 0;
-  color: $light;
   opacity: .9;
 }
 #homepage {
+  .homepage-description {
+    background-color: $xlight;
+    padding: 1em;
+  }
   .categories {
     padding-bottom: 2em;
     text-transform: uppercase;
     font-weight: 400;
-    letter-spacing: .1em;
+    letter-spacing: .05em;
     h3 {
-      color: $light;
       margin-bottom: 5px;
       font-size: .65em;
     }
     a {
       //font-size: .8em;
+      font-weight: 500;
       display: inline-block;
       padding: 12px 20px;
       //border-right: 1px solid $xlight;
       margin: 0;
       background: $white;
       margin-right: 1px;
+      transition: color 0.2s ease;
       font-size: .65em;
     }
     a:hover {
-
+      color: $link;
     }
     a.selected {
       background: transparent;
+        color: $link;
     }
     .scroll-box {
       overflow-x: auto;
       border: 1px solid $xlight;
+      border-bottom: 4px solid $xlight;
     }
     .scroll-inner {
       padding: 0;
@@ -392,11 +412,10 @@ p.homepage-description {
       font-size: .8em;
       margin-top: .5em;
       padding-bottom: 2em;
-      color: $light;
-      transition: color 0.5s ease;
+      //transition: color 0.2s ease;
       h1 {
-        color: $dark;
-        font-weight: 400;
+        font-weight: 500;
+        //color: $link;
       }
       h1, p {
         margin-bottom: 0;
@@ -406,24 +425,24 @@ p.homepage-description {
       width: 100%;
       filter: brightness(98%);
       -webkit-filter: brightness(98%);
-      transition: filter 0.5s ease, opacity .3s ease;
+      //transition: filter .5s ease, opacity .1s ease;
     }
   }
   article:hover {
     img, video {
-      filter: brightness(90%);
-      -webkit-filter: brightness(90%);
+      //filter: brightness(90%);
+      //-webkit-filter: brightness(90%);
     }
-    .info {
-      color: $dark;
+    h1 {
+      text-decoration: underline;
     }
   }
   // CATEGORY ANIMATIONS
   article {
-    display: none;
-  }
-  article.visible {
     display: block;
+  }
+  article.hidden {
+    display: none;
   }
 
 }
@@ -434,7 +453,6 @@ p.homepage-description {
     }
     p {
       margin: 1em 0;
-      color: $light;
     }
     p.img {
       max-width: 100%;
@@ -448,10 +466,13 @@ p.homepage-description {
     }
     h1, h2, h3 {
       font-size: 1.15em;
-      font-weight: 400;
+      font-weight: 500;
       margin-top: 2em;
       margin-bottom: 1em;
       color: $dark;
+    }
+    b, strong {
+      font-weight: 500;
     }
     blockquote {
       background-color: $xlight;
@@ -459,15 +480,15 @@ p.homepage-description {
       padding: 1px 1em;
     }
     a {
-      color: $dark;
+      color: $link;
     }
     a:hover {
-      @extend %underline;
+      text-decoration: underline;
     }
     hr {
       margin: 0;
       width: 30px;
-      background: $light;
+      background: $dark;
       height: 1px;
       border: none;
       margin: 3em 0;
@@ -488,13 +509,31 @@ footer {
   margin-bottom: 1em;
   p {
     max-width: none;
-    color: $light;
   }
 }
 .fade {
   opacity: 0;
-  transition: opacity 0.5s ease;
 }
 .fade-in {
+  transition: opacity 0.3s ease-in;
   opacity: 1;
+}
+
+.about-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: -2em;
+  flex-direction: row-reverse;
+  div {
+    margin-top: -1em;
+    width: 45%;
+    max-width: calc(50% - 2em);
+    flex-grow: 1;
+    margin-right: 2em;
+    @media (max-width: 740px) {
+      max-width: none;
+      width: 80%;
+    }
+  }
 }
