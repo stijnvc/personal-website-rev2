@@ -1,8 +1,8 @@
 
 $white: rgba(255, 255, 255,1);
-$xlight: rgba(255, 227, 211,.4);
-$light: rgba(8,7,8,.6);
-$dark: rgba(8,7,8,1);
+$xlight: rgba(0,0,0,.05);
+$light: rgba(0,0,0,.5);
+$dark: rgba(0,0,0,.9);
 $accent-light: rgba(237, 211, 196,.5);
 $accent-dark: rgba(119, 101, 227,1);
 //rgba(17,17,17,1);
@@ -248,7 +248,6 @@ body {
   line-height: 1.4;
   font-weight: 400;
   color: $dark;
-  padding: 0 1em;
   @media (max-width: 470px){
     font-size: 20px;
   }
@@ -266,10 +265,10 @@ h1, h2, h3 {
 }
 p {
   margin: 0;
-  max-width: 650px;
+  max-width: 617px;
 }
 blockquote {
-  max-width: 650px;
+  max-width: 617px;
 }
 a {
   text-decoration: none;
@@ -287,6 +286,7 @@ img {
 .wrapper {
   max-width: 1300px;
   margin: 0 auto;
+  padding: 0 1em;
 }
 .wrapper::after {
   content: "";
@@ -298,30 +298,33 @@ img {
   opacity: 0;
 }
 header {
-  margin-top: 1em;
-  border-bottom: 4px solid $xlight;
-  padding-bottom: 1em;
+  width: 100vw;
+  padding-bottom: 5px;
+  padding-top: 2em;
+  //position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: $xlight;
+  color: $dark;
+  margin-bottom: 2em;
   .title {
-    float: left;
-    width: 50%;
-    h1 {
-      font-weight: 400;
-      font-size: 1em;
-      display: block;
+    margin-bottom: 1em;
+    margin-top: -14px;
+    img.logo {
+      width: 13em;
     }
   }
   nav {
-    float: right;
-    width: 50%;
-    text-align: right;
+    margin-bottom: 2em;
     a {
       display: inline-block;
-      margin-left: 20px;
+      margin-right: 1em;
       font-weight: 400;
       transition: color 0.2s ease;
     }
     a:hover {
-      color: $link;
+      color: $light;
       //text-decoration: underline;
     }
   }
@@ -343,71 +346,54 @@ header {
 p.homepage-description {
   max-width: 100%;
   margin: 1.2em 0;
-  opacity: .9;
+}
+.categories {
+  display: none;
+}
+.homepage-description {
+  display: none;
 }
 #homepage {
   .homepage-description {
-    background-color: $xlight;
-    padding: 1em;
+    margin: 0;
+    margin-bottom: 2em;
+    display: block;
   }
   .categories {
-    padding-bottom: 2em;
+    margin-bottom: 2em;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: .05em;
+    display: block;
     h3 {
       margin-bottom: 5px;
       font-size: .65em;
     }
     a {
-      //font-size: .8em;
       font-weight: 500;
-      display: inline-block;
-      padding: 12px 20px;
-      //border-right: 1px solid $xlight;
+      display: block;
+      float: left;
+      border-radius: 5px;
+      padding: 10px 16px;
+      border: 1px solid $dark;
       margin: 0;
-      background: $white;
-      margin-right: 1px;
-      transition: color 0.2s ease;
+      margin-right: 5px;
+      margin-bottom: 5px;
+      background: transparent;
+      transition: color 0.2s ease, background-color 0.2s ease;
       font-size: .65em;
+      color: $dark;
     }
     a:hover {
-      color: $link;
+      background: $dark;
+      color: #f2f2f2;
     }
     a.selected {
-      background: transparent;
-        color: $link;
+      background: $dark;
+      color: #f2f2f2;
     }
-    .scroll-box {
-      overflow-x: auto;
-      border: 1px solid $xlight;
-      border-bottom: 4px solid $xlight;
-    }
-    .scroll-inner {
-      padding: 0;
-      white-space: nowrap;
-      width: auto;
-      float: left;
-      text-align: center;
-      line-height: 1;
-      background: $xlight;
-    }
-  }
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-right: -1em;
   }
   article {
-    width: 45%;
-    max-width: calc(50% - 1em);
-    flex-grow: 1;
-    margin-right: 1em;
-    @media (max-width: 740px) {
-      max-width: none;
-      width: 80%;
-    }
     .info {
       font-size: .8em;
       margin-top: .5em;
@@ -519,18 +505,34 @@ footer {
   opacity: 1;
 }
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-right: -1em;
+}
+.flex-item {
+  width: 45%;
+  max-width: calc(50% - 1em);
+  flex-grow: 1;
+  margin-right: 1em;
+  @media (max-width: 740px) {
+    max-width: none;
+    width: 80%;
+  }
+}
 .about-flex-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-right: -2em;
+  margin-right: -1em;
   flex-direction: row-reverse;
   div {
     margin-top: -1em;
     width: 45%;
-    max-width: calc(50% - 2em);
+    max-width: calc(50% - 1em);
     flex-grow: 1;
-    margin-right: 2em;
+    margin-right: 1em;
     @media (max-width: 740px) {
       max-width: none;
       width: 80%;

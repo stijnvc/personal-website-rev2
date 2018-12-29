@@ -2,19 +2,11 @@
 layout: homepage
 ---
 
-<div class="fade"><p class="homepage-description">I am a multidisciplinary designer with a strong interest in human-centered, speculative and systemic design. Since 2014 I study Industrial Design at HAN University of Applied Sciences. This is a selection of my work from various creative fields.</p>
-</div>
-<div class="fade noselect categories">
-  <h3>Filter by Creative Field:</h3>
-  <div class="scroll-box clearfix">
-    <div class="scroll-inner">
-      <a class="selected" href="#" cat-id="all">All</a><a href="#industrial-design" cat-id="industrial-design">Industrial Design</a><a href="#graphic-design" cat-id="graphic-design">Graphic Design</a><a href="#systemic-design" cat-id="systemic-design">Systemic Design</a><a href="#ui-design" cat-id="ui-design">UI Design</a><a href="#web-development" cat-id="web-development">Web Development</a><a href="#video" cat-id="video">Video</a>
-    </div>
-  </div>
-</div>
+
+
 <div class="fade flex-container portfolio-items">
 {% for item in site.fp-collection %}
-<article class="clearfix fade flex-{{ item.flex }} {{ item.category-id }}">
+<article class="clearfix fade flex-item flex-{{ item.flex }} {{ item.category-id }}">
   <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
     <div class="thumb">
       {% if item.video %}
