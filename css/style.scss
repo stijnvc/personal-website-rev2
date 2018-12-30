@@ -313,10 +313,11 @@ header {
     margin-top: -14px;
     img.logo {
       width: 13em;
+      display: inline-block;
     }
   }
   nav {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     a {
       display: inline-block;
       margin-right: 1em;
@@ -328,14 +329,13 @@ header {
       //text-decoration: underline;
     }
   }
-  @media (max-width: 450px){
+  @media (max-width: 740px){
     .title, nav {
       float: none;
       width: 100%;
       text-align: center;
     }
     nav {
-      margin-top: .5em;
       a {
         margin-right: 10px;
         margin-left: 10px;
@@ -356,11 +356,11 @@ p.homepage-description {
 #homepage {
   .homepage-description {
     margin: 0;
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     display: block;
   }
   .categories {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: .05em;
@@ -411,16 +411,13 @@ p.homepage-description {
       width: 100%;
       filter: brightness(98%);
       -webkit-filter: brightness(98%);
-      //transition: filter .5s ease, opacity .1s ease;
+      transition: filter .5s ease;
     }
   }
   article:hover {
     img, video {
-      //filter: brightness(90%);
-      //-webkit-filter: brightness(90%);
-    }
-    h1 {
-      text-decoration: underline;
+      filter: brightness(85%);
+      -webkit-filter: brightness(85%);
     }
   }
   // CATEGORY ANIMATIONS
