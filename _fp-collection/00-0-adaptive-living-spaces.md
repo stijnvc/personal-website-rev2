@@ -116,14 +116,3 @@ Vít Slepička
 ## Special Thanks To
 
 Our client, Charlotte van der Lande, for being so involved and approachable and providing us with insightful opportunities during this project.
-
-Everyone interviewed.
-
-Our project coaches:<br>
-Greta Castellana and Freek Pellicaan.
-
-All other coaches helping us during the project:<br>
-Andrew Bullen<br>
-Erwin Elling<br>
-Jens Gijbels<br>
-Saskia H. Herrmann
