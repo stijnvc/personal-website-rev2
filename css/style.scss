@@ -267,6 +267,13 @@ p {
   margin: 0;
   max-width: 617px;
 }
+ol,ul {
+  max-width: 617px;
+  li {
+    padding-left: .5em;
+    margin-bottom: .5em;
+  }
+}
 blockquote {
   max-width: 617px;
 }
@@ -430,6 +437,15 @@ p.homepage-description {
 }
 #page {
   #main {
+    .reading-time {
+      margin-bottom: -4em;
+      margin-top: 2em;
+      text-transform: uppercase;
+      font-weight: 400;
+      letter-spacing: .05em;
+      display: block;
+      font-size: .65em;
+    }
     article {
       margin: 2em 0;
     }
@@ -445,6 +461,9 @@ p.homepage-description {
     }
     p.video {
       max-width: 100%;
+      video {
+          filter: brightness(98%);
+      }
     }
     h1, h2, h3 {
       font-size: 1.15em;
@@ -452,6 +471,9 @@ p.homepage-description {
       margin-top: 2em;
       margin-bottom: 1em;
       color: $dark;
+    }
+    h1 {
+      font-size: 1.5em;
     }
     b, strong {
       font-weight: 500;
