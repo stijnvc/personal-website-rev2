@@ -103,7 +103,7 @@ Reimagining furniture as a service drastically changes the role for the designer
 
 ---
 
-[Download Research Report (21 pages, PDF, 2.6 MB)](#)
+[Download Research Report (21 pages, PDF, 2.6 MB)](/download/Adaptive_Living_Spaces_2019_-_Research_Report_-_Version_1.2.pdf)
 
 ---
 
