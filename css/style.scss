@@ -285,10 +285,6 @@ img, video {
   display: block;
   max-width: 100%;
 }
-img {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-}
 
 .wrapper {
   max-width: 1300px;
