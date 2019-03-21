@@ -440,7 +440,7 @@ audio {
 }
 
 // SLIDESHOW
-$slide-distance: 40px;
+$slide-distance: 50px;
 
 
 @-webkit-keyframes moveLTR {
@@ -529,20 +529,20 @@ $slide-distance: 40px;
     top: -$slide-distance;
     bottom: -$slide-distance;
   }
-  $time: 7s;
+  $time: 8s;
 
   //@media (min-width: 1200px){
     a.right.active {
-      -webkit-animation: moveLTR $time linear;
-              animation: moveLTR $time linear;
+      -webkit-animation: moveLTR $time ease-out forwards;
+              animation: moveLTR $time ease-out forwards;
     }
     a.left.active {
-      -webkit-animation: moveRTL $time linear;
-              animation: moveRTL $time linear;
+      -webkit-animation: moveRTL $time ease-out forwards;
+              animation: moveRTL $time ease-out forwards;
     }
     a.horizontal.active {
-      -webkit-animation: horizontal $time linear;
-              animation: horizontal $time linear;
+      -webkit-animation: horizontal $time ease-out forwards;
+              animation: horizontal $time ease-out forwards;
     }
   //}
 }
