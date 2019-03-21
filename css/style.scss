@@ -533,16 +533,16 @@ $slide-distance: 50px;
 
   //@media (min-width: 1200px){
     a.right.active {
-      -webkit-animation: moveLTR $time ease-out forwards;
-              animation: moveLTR $time ease-out forwards;
+      -webkit-animation: moveLTR $time cubic-bezier(.81,.95,.82,1) forwards;
+              animation: moveLTR $time cubic-bezier(.81,.95,.82,1) forwards;
     }
     a.left.active {
-      -webkit-animation: moveRTL $time ease-out forwards;
-              animation: moveRTL $time ease-out forwards;
+      -webkit-animation: moveRTL $time cubic-bezier(.81,.95,.82,1) forwards;
+              animation: moveRTL $time cubic-bezier(.81,.95,.82,1) forwards;
     }
     a.horizontal.active {
-      -webkit-animation: horizontal $time ease-out forwards;
-              animation: horizontal $time ease-out forwards;
+      -webkit-animation: horizontal $time cubic-bezier(.81,.95,.82,1) forwards;
+              animation: horizontal $time cubic-bezier(.81,.95,.82,1) forwards;
     }
   //}
 }

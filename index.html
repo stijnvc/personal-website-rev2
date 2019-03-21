@@ -21,37 +21,45 @@
 <script>
 
 $(document).ready(function(){
-  $("#start").html($("#src").html());
-  slides = $("#start #slides a");
-  number = slides.length;
-  counter= 0;
+
+  var slides = $('#slides')[0];
+  for (var i = slides.children.length; i >= 0; i--) {
+    slides.appendChild(slides.children[Math.random() * i | 0]);
+  }
   paused = false;
+  pauseTimeout = false;
 
   $('#slides a:first').prependTo('#slideshow').addClass('active');
 
-  setTimeout(slideshow(), 6000);
+  console.log('Slideshow started for first time.');
+  slidesInterval = setInterval(slidesRefresh, 6000);
 
-  function slideshow(){
-    setInterval(function() {
-      if(paused == false){
-        $('#slides a:first').prependTo('#slideshow');
-        $('#slideshow a:first').addClass('active');
-        $('#slideshow a:last').fadeOut(1000, function(){
-          $('#slideshow a:last').removeClass('active').appendTo('#slides');
-        });
-        $('#slides a').show(0);
-      } else {
-        
+  $(window).focus(function() {
+    if (paused == true) {
+      console.log('Window gained focus.');
+      if(pauseTimeout == false){
+        slidesRefresh();
       }
-    }, 6000);
-  }
-
-  $(window).focus(function () {
-    paused = false;
-  }).blur(function () {
+      paused = false;
+      slidesInterval = setInterval(slidesRefresh, 6000);
+    }
+  }).blur(function() {
+    console.log('Window lost focus.');
+    pauseTimeout = true
+    setTimeout(function(){pauseTimeout = false}, 3000);
     paused = true;
+    clearInterval(slidesInterval);
   });
 
+  function slidesRefresh() {
+    console.log('Slideshow refresh triggered.');
+    $('#slides a:first').prependTo('#slideshow');
+    $('#slideshow a:first').addClass('active');
+    $('#slideshow a:last').fadeOut(1000, function(){
+      $('#slideshow a:last').removeClass('active').appendTo('#slides');
+    });
+    $('#slides a').show(0);
+  }
 });
 
 </script>
