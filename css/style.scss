@@ -8,6 +8,7 @@ $accent-dark: rgba(119, 101, 227,1);
 //rgba(17,17,17,1);
 //$link: rgba( 4, 52, 242,1);
 $link: rgba( 0,0,0,1);
+$breaking-point: 740px;
 
 %underline {
   position: relative;
@@ -124,6 +125,13 @@ small {
     left: 0;
     background-color: white;
     overflow: hidden;
+    height: 150px;
+    @media (max-width: $breaking-point){
+      padding-top: 2.5em;
+      nav {
+        margin-bottom: 2.5em;
+      }
+    }
   }
 }
 .wrapper {
@@ -168,7 +176,7 @@ header {
       color: black;
     }
   }
-  @media (max-width: 740px){
+  @media (max-width: $breaking-point){
     .title, nav {
       float: none;
       width: 100%;
@@ -390,7 +398,7 @@ footer {
       -ms-flex-positive: 1;
           flex-grow: 1;
   margin-right: 4em;
-  @media (max-width: 740px) {
+  @media (max-width: $breaking-point) {
     max-width: none;
     width: 80%;
   }
@@ -417,7 +425,7 @@ footer {
         -ms-flex-positive: 1;
             flex-grow: 1;
     margin-right: 4em;
-    @media (max-width: 740px) {
+    @media (max-width: $breaking-point) {
       max-width: none;
       width: 80%;
     }
