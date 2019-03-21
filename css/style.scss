@@ -266,9 +266,10 @@ p.homepage-description {
     }
   }
   article:hover {
-    img, video {
-      filter: brightness(85%);
-      -webkit-filter: brightness(85%);
+    .info {
+      h1 {
+        color: $link;
+      }
     }
   }
   // CATEGORY ANIMATIONS

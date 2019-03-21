@@ -31,16 +31,17 @@ $(document).ready(function(){
 
   $("#start #slideshow a:last").addClass('active');
 
-  setTimeout(slideshow(), 5500);
+  setTimeout(slideshow(), 6000);
 
   function slideshow(){
     setInterval(function() {
-      $('#start #slides a:first').prependTo('#start #slideshow').fadeIn(0);
+      $('#start #slides a:first').prependTo('#start #slideshow');
       $('#start #slideshow a:first').addClass('active');
-      $('#start #slideshow a:last').fadeOut(1500, function(){
-        $('#start #slideshow a:last').removeClass('active').appendTo('#start #slides')
+      $('#start #slideshow a:last').fadeOut(1000, function(){
+        $('#start #slideshow a:last').removeClass('active').appendTo('#start #slides');
       });
-    }, 5500);
+      $('#start #slides a').show(0);
+    }, 6000);
   }
 });
 
