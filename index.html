@@ -1,72 +1,49 @@
 ---
-layout: homepage
 ---
 
+{% include head.html %}
+<body id="front-page">
+{% include header.html %}
 
+<div class="fade" id="start"></div>
+<div id="src" style="display:none;">
+  <div id="slideshow">
+    <a title="Revolve Waterbottle | 2017" href="/revolve-waterbottle" class="left" style="background-image: url(/img/slideshow/packaging-min.jpg)"></a>
+  </div>
 
-<div class="fade flex-container portfolio-items">
-{% for item in site.fp-collection %}
-<article class="clearfix fade flex-item flex-{{ item.flex }} {{ item.category-id }}">
-  <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
-    <div class="thumb">
-      {% if item.video %}
-      <video autoplay loop muted poster="{{ site.baseurl }}/vid/{{ item.video }}/poster.jpg">
-         <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.mp4" type="video/mp4">
-         <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.webm" type="video/webm">
-      </video>
-      {% else %}
-        <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
-      {% endif %}
-    </div>
-    <div class="info clearfix">
-      <div class="description">
-        <h1>{{ item.title }}</h1>
-        <!-- <p>{{ item.description }}</p> -->
-      </div>
-      <div class="meta">
-        <p>{{ item.category }}</p>
-        <p>{{ item.year }}</p>
-      </div>
-    </div>
-  </a>
-</article>
-{% endfor %}
+  <div id="slides" style="display:none;">
+    <a title="Lunchbox: Like Tableware | 2017" href="/lunchbox" class="left" style="background-image: url(/img/slideshow/lunchbox-hero.jpg)"></a>
+    <a title="Salad Shaker | 2017" href="/salad-shaker" class="horizontal" style="background-image: url(/img/slideshow/salad-shaker-hero.jpg)"></a>
+    <a title="Bike Basket | 2016" href="/bike-basket" class="right" style="background-image: url(/img/slideshow/bike-basket-01.jpg)"></a>
+    <a title="MIDI controller | 2018" href="/arduino-midi-controller" class="right" style="background-image: url(/img/slideshow/midi-controller.jpg)"></a>
+  </div>
 </div>
+
+
 <script>
 
-  function catUpdate(catId){
-    $(".categories a").removeClass("selected");
-    if(catId !== ""){
-      $("[cat-id="+catId+"]").addClass("selected");
-      if(catId == "all"){
-        $("article").removeClass("hidden");
-      }else{
-        $("article").addClass("hidden");
-        $("article." + catId).removeClass("hidden");
-      }
-    }else{
-      $("[cat-id=all]").addClass("selected");
-    }
+$(document).ready(function(){
+  $("#start").html($("#src").html());
+  slides = $("#start #slides a");
+  number = slides.length;
+  counter= 0;
+
+
+  $("#start #slideshow a:last").addClass('active');
+
+  setTimeout(slideshow(), 5500);
+
+  function slideshow(){
+    setInterval(function() {
+      $('#start #slides a:first').prependTo('#start #slideshow').fadeIn(0);
+      $('#start #slideshow a:first').addClass('active');
+      $('#start #slideshow a:last').fadeOut(1500, function(){
+        $('#start #slideshow a:last').removeClass('active').appendTo('#start #slides')
+      });
+    }, 5500);
   }
-
-  var hash = location.hash.substr(1);
-  catUpdate(hash);
-
-  $(document).on("click", ".categories a", function(e) {
-    e.preventDefault();
-    catId = $(this).attr("cat-id");
-    if(history.pushState) {
-      history.pushState(null, null, '#' + catId);
-    }
-    else {
-      location.hash = '#' + catId;
-    }
-    catUpdate(catId);
-  });
+});
 
 </script>
-<style>
-a.projects {
-  text-decoration: underline;
-}
-</style>
+
+{% include footer.html %}

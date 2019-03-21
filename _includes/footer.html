@@ -1,6 +1,6 @@
 
 <footer class="fade">
-  <p><small>2018 Stijn van Cuijk — contact@stijn.vc — Arnhem, NL</small></p>
+  <p><small>2018 Stijn van Cuijk — <a href="mailto:contact@stijn.vc">contact@stijn.vc</a> — Arnhem, NL</small></p>
 </footer>
 
 
@@ -8,20 +8,20 @@
 <script>
 
   $(document).ready(function(){
-    $("#main").fitVids();
-  });
 
-  // fade in divs
-  var fadein = $('.fade');
-  $.each(fadein, function(i, item) {
-  	setTimeout(function() {
-  		$(item).addClass("fade-in"); // duration of fadein
-  	}, 25 * i); // duration between fadeins
+    $("#main").fitVids();
+
+
   });
+    // fade in divs
+    var fadein = $('.fade');
+    $.each(fadein, function(i, item) {
+    	setTimeout(function() {
+    		$(item).addClass("fade-in"); // duration of fadein
+    	}, 25 * i); // duration between fadeins
+    });
 
 </script>
-<script src="{{ site.baseurl }}/js/instantclick.min.js" data-no-instant></script>
-<script data-no-instant>InstantClick.init();</script>
 <noscript>
 <style>
 .fade {

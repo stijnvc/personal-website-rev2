@@ -1,0 +1,73 @@
+---
+layout: homepage
+title: Projects
+---
+
+
+
+<div class="fade flex-container portfolio-items">
+{% for item in site.fp-collection %}
+<article class="clearfix fade flex-item flex-{{ item.flex }} {{ item.category-id }}">
+  <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
+    <div class="thumb">
+      {% if item.video %}
+      <video autoplay loop muted poster="{{ site.baseurl }}/vid/{{ item.video }}/poster.jpg">
+         <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.mp4" type="video/mp4">
+         <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.webm" type="video/webm">
+      </video>
+      {% else %}
+        <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
+      {% endif %}
+    </div>
+    <div class="info clearfix">
+      <div class="description">
+        <h1>{{ item.title }}</h1>
+        <!-- <p>{{ item.description }}</p> -->
+      </div>
+      <div class="meta">
+        <p>{{ item.category }}</p>
+        <p>{{ item.year }}</p>
+      </div>
+    </div>
+  </a>
+</article>
+{% endfor %}
+</div>
+<script>
+
+  function catUpdate(catId){
+    $(".categories a").removeClass("selected");
+    if(catId !== ""){
+      $("[cat-id="+catId+"]").addClass("selected");
+      if(catId == "all"){
+        $("article").removeClass("hidden");
+      }else{
+        $("article").addClass("hidden");
+        $("article." + catId).removeClass("hidden");
+      }
+    }else{
+      $("[cat-id=all]").addClass("selected");
+    }
+  }
+
+  var hash = location.hash.substr(1);
+  catUpdate(hash);
+
+  $(document).on("click", ".categories a", function(e) {
+    e.preventDefault();
+    catId = $(this).attr("cat-id");
+    if(history.pushState) {
+      history.pushState(null, null, '#' + catId);
+    }
+    else {
+      location.hash = '#' + catId;
+    }
+    catUpdate(catId);
+  });
+
+</script>
+<style>
+a.projects {
+  color: black;
+}
+</style>

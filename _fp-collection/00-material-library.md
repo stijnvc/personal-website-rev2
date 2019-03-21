@@ -1,6 +1,6 @@
 ---
 title: HUB Turku Material Library
-description: Designing a concept for a Material Library for HUB Turku
+description: Designing a concept for a Material Library for HUB Turku.
 thumbnail: material-library.jpg
 video: material-library
 permalink: material-library
