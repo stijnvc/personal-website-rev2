@@ -435,15 +435,24 @@ footer {
 audio {
   display: none;
 }
-#instantclick-bar {
-  background: $light;
-}
+
 
 // SLIDESHOW
 $slide-distance: 50px;
+$time: 8s; /* should be about a second longer than the slideDuration for the smoothest transition */
 
+@-webkit-keyframes ltright {
+  from {
+    -webkit-transform: translateY(0px) translateX(-$slide-distance);
+            transform: translateY(0px) translateX(-$slide-distance);
+  }
+  to {
+    -webkit-transform: translateY(0px) translateX($slide-distance);
+            transform: translateY(0px) translateX($slide-distance);
+  }
+}
 
-@-webkit-keyframes moveLTR {
+@keyframes ltright {
   from {
     -webkit-transform: translateY(0px) translateX(-$slide-distance);
             transform: translateY(0px) translateX(-$slide-distance);
@@ -453,17 +462,7 @@ $slide-distance: 50px;
             transform: translateY(0px) translateX($slide-distance);
   }
 }
-@keyframes moveLTR {
-  from {
-    -webkit-transform: translateY(0px) translateX(-$slide-distance);
-            transform: translateY(0px) translateX(-$slide-distance);
-  }
-  to {
-    -webkit-transform: translateY(0px) translateX($slide-distance);
-            transform: translateY(0px) translateX($slide-distance);
-  }
-}
-@-webkit-keyframes moveRTL {
+@-webkit-keyframes rtleft {
   from {
     -webkit-transform: translateY(0px) translateX($slide-distance);
             transform: translateY(0px) translateX($slide-distance);
@@ -473,7 +472,7 @@ $slide-distance: 50px;
             transform: translateY(0px) translateX(-$slide-distance);
   }
 }
-@keyframes moveRTL {
+@keyframes rtleft {
   from {
     -webkit-transform: translateY(0px) translateX($slide-distance);
             transform: translateY(0px) translateX($slide-distance);
@@ -483,7 +482,7 @@ $slide-distance: 50px;
             transform: translateY(0px) translateX(-$slide-distance);
   }
 }
-@-webkit-keyframes horizontal {
+@-webkit-keyframes down {
   from {
     -webkit-transform: translateY(-$slide-distance) translateX(0px);
             transform: translateY(-$slide-distance) translateX(0px);
@@ -493,7 +492,7 @@ $slide-distance: 50px;
             transform: translateY($slide-distance) translateX(0px);
   }
 }
-@keyframes horizontal {
+@keyframes down {
   from {
     -webkit-transform: translateY(-$slide-distance) translateX(0px);
             transform: translateY(-$slide-distance) translateX(0px);
@@ -501,6 +500,26 @@ $slide-distance: 50px;
   to {
     -webkit-transform: translateY($slide-distance) translateX(0px);
             transform: translateY($slide-distance) translateX(0px);
+  }
+}
+@-webkit-keyframes up {
+  from {
+    -webkit-transform: translateY($slide-distance) translateX(0px);
+            transform: translateY($slide-distance) translateX(0px);
+  }
+  to {
+    -webkit-transform: translateY(-$slide-distance) translateX(0px);
+            transform: translateY(-$slide-distance) translateX(0px);
+  }
+}
+@keyframes up {
+  from {
+    -webkit-transform: translateY($slide-distance) translateX(0px);
+            transform: translateY($slide-distance) translateX(0px);
+  }
+  to {
+    -webkit-transform: translateY(-$slide-distance) translateX(0px);
+            transform: translateY(-$slide-distance) translateX(0px);
   }
 }
 #slideshow {
@@ -509,40 +528,55 @@ $slide-distance: 50px;
   left: 0;
   right: 0;
   bottom: 150px;
-  background-color: $xlight;
-  a {
-    background-size: cover;
-    background-position: center;
-    padding: 2em;
-    text-align: center;
+  .slide, span {
+    display: block;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    span {
+      background-size: cover;
+      background-position: center;
+    }
+    span.ltright, span.rtleft {
+      left: -$slide-distance;
+      right: -$slide-distance;
+    }
+    span.up, span.down {
+      top: -$slide-distance;
+      bottom: -$slide-distance;
+    }
   }
-  a.right, a.left {
-    left: -$slide-distance;
-    right: -$slide-distance;
+  span.ltright.active {
+    -webkit-animation: ltright $time cubic-bezier(.81,.95,.82,1) forwards;
+            animation: ltright $time cubic-bezier(.81,.95,.82,1) forwards;
   }
-  a.horizontal {
-    top: -$slide-distance;
-    bottom: -$slide-distance;
+  span.rtleft.active {
+    -webkit-animation: rtleft $time cubic-bezier(.81,.95,.82,1) forwards;
+            animation: rtleft $time cubic-bezier(.81,.95,.82,1) forwards;
   }
-  $time: 8s;
+  span.up.active {
+    -webkit-animation: up $time cubic-bezier(.81,.95,.82,1) forwards;
+            animation: up $time cubic-bezier(.81,.95,.82,1) forwards;
+  }
+  span.down.active {
+    -webkit-animation: down $time cubic-bezier(.81,.95,.82,1) forwards;
+            animation: down $time cubic-bezier(.81,.95,.82,1) forwards;
+  }
+}
 
-  //@media (min-width: 1200px){
-    a.right.active {
-      -webkit-animation: moveLTR $time cubic-bezier(.81,.95,.82,1) forwards;
-              animation: moveLTR $time cubic-bezier(.81,.95,.82,1) forwards;
-    }
-    a.left.active {
-      -webkit-animation: moveRTL $time cubic-bezier(.81,.95,.82,1) forwards;
-              animation: moveRTL $time cubic-bezier(.81,.95,.82,1) forwards;
-    }
-    a.horizontal.active {
-      -webkit-animation: horizontal $time cubic-bezier(.81,.95,.82,1) forwards;
-              animation: horizontal $time cubic-bezier(.81,.95,.82,1) forwards;
-    }
-  //}
+.static-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  h1 {
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 1300px;
+  }
+  h1.dark-background {
+    color: rgba(255, 255, 255,.5);
+  }
 }

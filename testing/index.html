@@ -1,0 +1,41 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <script src="{{ site.baseurl }}/js/jquery-3.3.1.min.js"></script>
+    <script src="{{ site.baseurl }}/testing/jquery.panning-slideshow.js"></script>
+    <link rel="stylesheet" href="{{ site.baseurl }}/testing/style.min.css">
+  </head>
+  <body>
+
+
+
+    <div id="slides" style="display:none;">
+      <a class="slide" title="Revolve Waterbottle | 2017" href="#">
+        <span class="rtleft" style="background-image: url(https://stijnvancuijk.com/img/slideshow/packaging-min.jpg)"></span>
+        <div class="static-content"><h1>Revolve Waterbottle</h1></div>
+      </a>
+      <a class="slide" title="Lunchbox: Like Tableware | 2017" href="#">
+        <span class="rtleft" style="background-image: url(https://stijnvancuijk.com/img/slideshow/lunchbox-hero.jpg)"></span>
+        <div class="static-content"><h1>Lunchbox</h1></div>
+      </a>
+      <a class="slide" title="Salad Shaker | 2017" href="#">
+        <span class="down" style="background-image: url(https://stijnvancuijk.com/img/slideshow/salad-shaker-hero.jpg)"></span>
+        <div class="static-content"><h1>Salad Shaker</h1></div>
+      </a>
+      <a class="slide" title="Bike Basket | 2016" href="#">
+        <span class="up" style="background-image: url(https://stijnvancuijk.com/img/slideshow/bike-basket-01.jpg)"></span>
+        <div class="static-content"><h1>Bike Basket</h1></div>
+      </a>
+      <a class="slide" title="MIDI Controller | 2018" href="#">
+        <span class="ltright" style="background-image: url(https://stijnvancuijk.com/img/portfolio/midi-controller.jpg)"></span>
+        <div class="static-content"><h1>MIDI Controller</h1></div>
+      </a>
+    </div>
+
+    <script>$('#slides').slideshow();</script>
+  </body>
+</html>
