@@ -57,11 +57,11 @@ $.fn.slideshow = function(options) {
 
   function slideRefresh() {
     console.log('Slide refresh triggered.');
-    //var slideshowDOM = $('#slideshow')[0];
-    //if(slideshowDOM.children.length == 0) {
-      //console.log('There are no slides in the slideshow.');
-      //slides.find(settings.slideElement + ':first').prependTo('#slideshow');
-    //}else{
+    var slideshowDOM = $('#slideshow')[0];
+    if(slideshowDOM.children.length == 0) {
+      console.log('There are no slides in the slideshow.');
+      slides.find(settings.slideElement + ':first').prependTo('#slideshow');
+    }else{
       slides.find(settings.slideElement + ':first').prependTo('#slideshow');
       $('#slideshow ' + settings.slideElement + ':first span').addClass('active');
       $('#slideshow ' + settings.slideElement + ':last').fadeOut(settings.fadeDuration, function(){
@@ -69,7 +69,7 @@ $.fn.slideshow = function(options) {
         $('#slideshow ' + settings.slideElement + ':last').appendTo(slides);
         slides.find(settings.slideElement).show(0);
       });
-    //}
+    }
   }
 };
 
