@@ -10,7 +10,7 @@ flex: large
 ---
 
 
-![Design process](/img/portfolio/drinkfles-2/evolution-min.jpg)
+![Top view](/img/portfolio/drinkfles2019-05.jpg)
 
 ## Vision
 
@@ -18,6 +18,23 @@ Design a water bottle that fits into the daily routine like a jigsaw piece into 
 
 >“When designing an object, do you just create its ‘outline’, or do you try to make that ‘outline’ fit into the environment?”<br>
 >— Naoto Fukasawa
+
+
+![Hero view](/img/portfolio/drinkfles2019-01.jpg)
+
+![Opening visualization](/img/portfolio/drinkfles2019-03.jpg)
+
+![Filling the bottle and filtration visualization](/img/portfolio/drinkfles2019-04.jpg)
+
+![Exploded view](/img/portfolio/drinkfles2019-06.jpg)
+
+![Packaging visualization](/img/portfolio/drinkfles2019-02.jpg)
+
+---
+
+## Design Process
+
+![Design process](/img/portfolio/drinkfles-2/evolution-min.jpg)
 
 ## Idea
 
@@ -62,22 +79,6 @@ Testing a 3D printed prototype in different environments.
 ![context 2](/img/portfolio/drinkfles_context_02.jpg)
 
 ![context 4](/img/portfolio/drinkfles_context_04.jpg)
-
-## Final Design
-
-![Top view](/img/portfolio/drinkfles-2/icon-min.jpg)
-
-![Hero view](/img/portfolio/drinkfles-2/hero-min.jpg)
-
-![Opening with thumb visualization](/img/portfolio/drinkfles-2/opening-min.jpg)
-
-![Filling the bottle and filtration visualization](/img/portfolio/drinkfles-2/filling-min.jpg)
-
-![Parts overview](/img/portfolio/drinkfles-2/parts-min.jpg)
-
-## Packaging Concept
-
-![Packaging visualization](/img/portfolio/drinkfles-2/packaging-min.jpg)
 
 ---
 
