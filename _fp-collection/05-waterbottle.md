@@ -22,8 +22,6 @@ Design a water bottle that fits into the daily routine like a jigsaw piece into 
 
 ![Hero view](/img/portfolio/drinkfles2019-01.jpg)
 
-![Opening visualization](/img/portfolio/drinkfles2019-03.jpg)
-
 ![Filling the bottle and filtration visualization](/img/portfolio/drinkfles2019-04.jpg)
 
 ![Exploded view](/img/portfolio/drinkfles2019-06.jpg)

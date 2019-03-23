@@ -8,6 +8,13 @@ category: Industrial Design
 category-id: industrial-design
 ---
 
+![lunchbox](/img/portfolio/lunchbox-hero.jpg)
+
+![lunchbox open](/img/portfolio/lunchbox-open.jpg)
+
+---
+
+## Design Process
 
 A lot of plastic lunchboxes look just like that: plastic boxes. Plastic lunchboxes do have the great advantage of being nearly unbreakable, light, dishwasher safe and microwave safe. But why not design it more like actual tableware? I set out to design a lunchbox that has an esthetic similar to what a ceramic piece of tableware could have.
 
