@@ -10,28 +10,14 @@ $accent-dark: rgba(119, 101, 227,1);
 $link: rgba( 0,0,0,1);
 $breaking-point: 740px;
 
-%underline {
-  position: relative;
-  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white, 1px 1px 0 $white;
-  background: -webkit-gradient(linear, left top, left bottom, from($dark), to($dark));
-  background: linear-gradient($dark, $dark);
-  background-size: 1px 1px;
-  background-repeat: repeat-x;
-  background-size: 1px 1px;
-  background-position: 0 89%;
-}
-
-
 ::-moz-selection {
-  background: $xlight;
+  background: $light;
 }
-
-
 ::selection {
-  background: $xlight;
+  background: $light;
 }
 ::-moz-selection {
-  background: $xlight;
+  background: $light;
 }
 .clearfix:after {
   content: "";
@@ -440,96 +426,186 @@ audio {
 
 
 // SLIDESHOW
-$slide-distance: 50px;
-$time: 8s; /* should be about a second longer than the slideDuration for the smoothest transition */
 
-@-webkit-keyframes ltright {
+$slide-distance: calc((4vw + 4vh + 4%)/3);
+
+$slide-distance-ms: 4%; // IE11 does not support calc() in transform:translate;
+
+$slide-distance-negative: calc((-4vw + -4vh + -4%)/3);
+
+$zoom-scale: 1.15;
+
+// Option for slide distance without calc(). More compatible but not as
+// consistant on screens that are not exactely square.
+//
+// $slide-distance: 5%;
+// $slide-distance-negative: -5%;
+
+// The 0.01deg rotation is a hack to make the animations smooth on Firefox
+
+@-webkit-keyframes right {
   from {
-    -webkit-transform: translateY(0px) translateX(-$slide-distance);
-            transform: translateY(0px) translateX(-$slide-distance);
+    -webkit-transform: translateX($slide-distance-negative) rotate(0.01deg);
+            transform: translateX($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateX(-$slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY(0px) translateX($slide-distance);
-            transform: translateY(0px) translateX($slide-distance);
+    -webkit-transform: translateX($slide-distance) rotate(0.01deg);
+            transform: translateX($slide-distance) rotate(0.01deg);
+    -ms-transform: translateX($slide-distance-ms);
   }
 }
 
-@keyframes ltright {
+@keyframes right {
   from {
-    -webkit-transform: translateY(0px) translateX(-$slide-distance);
-            transform: translateY(0px) translateX(-$slide-distance);
+    -webkit-transform: translateX($slide-distance-negative) rotate(0.01deg);
+            transform: translateX($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateX(-$slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY(0px) translateX($slide-distance);
-            transform: translateY(0px) translateX($slide-distance);
+    -webkit-transform: translateX($slide-distance) rotate(0.01deg);
+            transform: translateX($slide-distance) rotate(0.01deg);
+    -ms-transform: translateX($slide-distance-ms);
   }
 }
-@-webkit-keyframes rtleft {
+
+@-webkit-keyframes left {
   from {
-    -webkit-transform: translateY(0px) translateX($slide-distance);
-            transform: translateY(0px) translateX($slide-distance);
+    -webkit-transform: translateX($slide-distance) rotate(0.01deg);
+            transform: translateX($slide-distance) rotate(0.01deg);
+    -ms-transform: translateX($slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY(0px) translateX(-$slide-distance);
-            transform: translateY(0px) translateX(-$slide-distance);
+    -webkit-transform: translateX($slide-distance-negative) rotate(0.01deg);
+            transform: translateX($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateX(-$slide-distance-ms);
   }
 }
-@keyframes rtleft {
+
+@keyframes left {
   from {
-    -webkit-transform: translateY(0px) translateX($slide-distance);
-            transform: translateY(0px) translateX($slide-distance);
+    -webkit-transform: translateX($slide-distance) rotate(0.01deg);
+            transform: translateX($slide-distance) rotate(0.01deg);
+    -ms-transform: translateX($slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY(0px) translateX(-$slide-distance);
-            transform: translateY(0px) translateX(-$slide-distance);
+    -webkit-transform: translateX($slide-distance-negative) rotate(0.01deg);
+            transform: translateX($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateX(-$slide-distance-ms);
   }
 }
+
 @-webkit-keyframes down {
   from {
-    -webkit-transform: translateY(-$slide-distance) translateX(0px);
-            transform: translateY(-$slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance-negative) rotate(0.01deg);
+            transform: translateY($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateY(-$slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY($slide-distance) translateX(0px);
-            transform: translateY($slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance) rotate(0.01deg);
+            transform: translateY($slide-distance) rotate(0.01deg);
+    -ms-transform: translateY($slide-distance-ms);
   }
 }
+
 @keyframes down {
   from {
-    -webkit-transform: translateY(-$slide-distance) translateX(0px);
-            transform: translateY(-$slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance-negative) rotate(0.01deg);
+            transform: translateY($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateY(-$slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY($slide-distance) translateX(0px);
-            transform: translateY($slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance) rotate(0.01deg);
+            transform: translateY($slide-distance) rotate(0.01deg);
+    -ms-transform: translateY($slide-distance-ms);
   }
 }
+
 @-webkit-keyframes up {
   from {
-    -webkit-transform: translateY($slide-distance) translateX(0px);
-            transform: translateY($slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance) rotate(0.01deg);
+            transform: translateY($slide-distance) rotate(0.01deg);
+    -ms-transform: translateY($slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY(-$slide-distance) translateX(0px);
-            transform: translateY(-$slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance-negative) rotate(0.01deg);
+            transform: translateY($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateY(-$slide-distance-ms);
   }
 }
+
 @keyframes up {
   from {
-    -webkit-transform: translateY($slide-distance) translateX(0px);
-            transform: translateY($slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance) rotate(0.01deg);
+            transform: translateY($slide-distance) rotate(0.01deg);
+    -ms-transform: translateY($slide-distance-ms);
   }
   to {
-    -webkit-transform: translateY(-$slide-distance) translateX(0px);
-            transform: translateY(-$slide-distance) translateX(0px);
+    -webkit-transform: translateY($slide-distance-negative) rotate(0.01deg);
+            transform: translateY($slide-distance-negative) rotate(0.01deg);
+    -ms-transform: translateY(-$slide-distance-ms);
   }
 }
+
+@-webkit-keyframes out {
+  from {
+    -webkit-transform: scale($zoom-scale);
+            transform: scale($zoom-scale);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes out {
+  from {
+    -webkit-transform: scale($zoom-scale);
+            transform: scale($zoom-scale);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes in {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale($zoom-scale);
+            transform: scale($zoom-scale);
+  }
+}
+
+@keyframes in {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale($zoom-scale);
+            transform: scale($zoom-scale);
+  }
+}
+
+#slides {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+}
+
 #slideshow {
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
   bottom: 150px;
+
   .slide, span {
     display: block;
     position: absolute;
@@ -537,35 +613,75 @@ $time: 8s; /* should be about a second longer than the slideDuration for the smo
     left: 0;
     right: 0;
     bottom: 0;
+  }
+
+  .slide {
+
     span {
       background-size: cover;
       background-position: center;
     }
-    span.ltright, span.rtleft {
-      left: -$slide-distance;
-      right: -$slide-distance;
+
+    span.animate.right, span.animate.left {
+      left: $slide-distance-negative;
+      right: $slide-distance-negative;
     }
-    span.up, span.down {
-      top: -$slide-distance;
-      bottom: -$slide-distance;
+
+    span.animate.up, span.animate.down {
+      top: $slide-distance-negative;
+      bottom: $slide-distance-negative;
     }
+
   }
-  span.ltright.active {
-    -webkit-animation: ltright $time cubic-bezier(.81,.95,.82,1) forwards;
-            animation: ltright $time cubic-bezier(.81,.95,.82,1) forwards;
+
+  // Time gets set by JS
+
+  span.animate {
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-transition: opacity 0.5s ease;
+    transition: opacity 0.5s ease;
+    opacity: 1;
   }
-  span.rtleft.active {
-    -webkit-animation: rtleft $time cubic-bezier(.81,.95,.82,1) forwards;
-            animation: rtleft $time cubic-bezier(.81,.95,.82,1) forwards;
+
+  span.animate.right {
+    -webkit-animation-name: right;
+            animation-name: right;
   }
-  span.up.active {
-    -webkit-animation: up $time cubic-bezier(.81,.95,.82,1) forwards;
-            animation: up $time cubic-bezier(.81,.95,.82,1) forwards;
+
+  span.animate.left {
+    -webkit-animation-name: left;
+            animation-name: left;
   }
-  span.down.active {
-    -webkit-animation: down $time cubic-bezier(.81,.95,.82,1) forwards;
-            animation: down $time cubic-bezier(.81,.95,.82,1) forwards;
+
+  span.animate.up {
+    -webkit-animation-name: up;
+            animation-name: up;
   }
+
+  span.animate.down {
+    -webkit-animation-name: down;
+            animation-name: down;
+  }
+
+  span.animate.in {
+    -webkit-animation-name: in;
+            animation-name: in;
+  }
+
+  span.animate.out {
+    -webkit-animation-name: out;
+            animation-name: out;
+  }
+
+  span.animate.paused {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+    opacity: .7;
+  }
+
 }
 
 .static-content {
