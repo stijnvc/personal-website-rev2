@@ -2,6 +2,7 @@
 title: Digital Christmas Card
 description: A Year In Review website for Smaac presented as a Christmas carol.
 video: kerstvertelling
+thumbnail: kerstvertelling.jpg
 permalink: digital-christmas-card
 year: 2015
 category: Graphic Design / Web Development

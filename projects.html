@@ -10,13 +10,12 @@ title: Projects
 <article class="clearfix fade flex-item flex-{{ item.flex }} {{ item.category-id }}">
   <a class="permalink" href="{{ item.url | prepend: site.baseurl }}">
     <div class="thumb">
+      <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
       {% if item.video %}
-      <video autoplay loop muted poster="{{ site.baseurl }}/vid/{{ item.video }}/poster.jpg">
+      <video autoplay loop muted poster="{{ site.baseurl }}/img/{{ item.thumbnail }}">
          <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.mp4" type="video/mp4">
          <source src="{{ site.baseurl }}/vid/{{ item.video }}/video.webm" type="video/webm">
       </video>
-      {% else %}
-        <img draggable="false" alt="thumbnail" src="{{ site.baseurl }}/img/{{ item.thumbnail }}">
       {% endif %}
     </div>
     <div class="info clearfix">
@@ -52,6 +51,11 @@ title: Projects
 
   var hash = location.hash.substr(1);
   catUpdate(hash);
+
+  $("article").on("mouseenter", function () {
+    var video = $(this).find('video')[0];
+    video.currentTime = 0;
+  });
 
   $(document).on("click", ".categories a", function(e) {
     e.preventDefault();
