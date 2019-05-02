@@ -2,7 +2,7 @@
 $white: rgba(255, 255, 255,1);
 $xlight: rgba(0,0,0,.05);
 $light: rgba(0,0,0,.3);
-$dark: rgba(0,0,0,.5);
+$dark: rgba(0,0,0,.55);
 $accent-light: rgba(237, 211, 196,.5);
 $accent-dark: rgba(119, 101, 227,1);
 //rgba(17,17,17,1);
@@ -50,6 +50,19 @@ $breaking-point: 740px;
 	src: url('fonts/FFDINPro-Bold.woff') format('woff');
 	font-weight: 600;
 	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Charter Web';
+	src: url('fonts/Charter.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Charter Web';
+	src: url('fonts/Charter-Italic.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
 }
 
 
@@ -352,6 +365,17 @@ p.homepage-description {
         width: auto;
         max-width: none;
         height: 80vh;
+      }
+    }
+    article.reading {
+      p {
+        margin: 1em 0;
+        font-family: "Charter Web", serif;
+          font-size: 1.2em;
+      }
+      p.img {
+        font-family: inherit;
+        font-size: inherit;
       }
     }
   }
