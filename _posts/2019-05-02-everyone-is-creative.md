@@ -21,7 +21,7 @@ In my opinion creativity should be at the core of every business. Once discontin
 
 Trust the creative process.
 
-> Struggling with this phenomena on daily basis triggered me to write this essay. It is based on experiences and stories of creative people working in creatively stagnated companies and my reading into creativity, abstraction and playing in the context of design.
+> Struggling with this phenomenon on daily basis triggered me to write this essay. It is based on experiences and stories of creative people working in creatively stagnated companies and my reading into creativity, abstraction and playing in the context of design.
 
 *Updated: May 2nd 2019*
 
