@@ -6,15 +6,7 @@ description:
   # Description of your site. This will show up in google.
   meta: Portfolio of Stijn van Cuijk, a multidisciplinary designer currently studying Industrial Product Design.
 
-portfolio:
-  download-url: \#
-  last-updated: 2018/8/26
-  size: 84
-
-cv:
-  download-url: \#
-  last-updated: 2018/8/5
-  size: 12
+date_format: "%b %-d, %Y"
 
 # The URL of the homepage of your site (without trailing slash). Leave this
 # empty when you run Jekyll locally.
@@ -38,7 +30,13 @@ permalink: pretty
 defaults:
   - scope:
       path: ""
-      type: fp-collection
+      type: "fp-collection"
     values:
-      layout: page
+      layout: "page"
+      excerpt_separator: "<!--more-->"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post-page"
       excerpt_separator: "<!--more-->"
