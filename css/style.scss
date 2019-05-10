@@ -254,6 +254,11 @@ p.homepage-description {
       h1, p {
         margin-bottom: 0;
       }
+      svg {
+        height: 0.8em;
+        opacity: .5;
+        margin-left: 5px;
+      }
     }
     .thumb {
       position: relative;
@@ -261,8 +266,8 @@ p.homepage-description {
     }
     img, video {
       width: 100%;
-      filter: brightness(98%);
-      -webkit-filter: brightness(98%);
+      // filter: brightness(98%);
+      // -webkit-filter: brightness(98%);
     }
     video {
       position: absolute;
