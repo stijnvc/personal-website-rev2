@@ -65,8 +65,8 @@ Designed in 2016 during my internship at Smaac.
 
 This is my very first design project. Designed and build in my first year at the HAN University of Applied Sciences, 2014.
 
-![Wooden Desk Lamp](/img/portfolio/etc_bureaulamp_01.jpg)
+![Wooden Desk Lamp / Houten bureaulamp 1](/img/portfolio/etc_bureaulamp_01.jpg)
 
-![Wooden Desk Lamp](/img/portfolio/etc_bureaulamp_02.jpg)
+![Wooden Desk Lamp / Houten bureaulamp 2](/img/portfolio/etc_bureaulamp_02.jpg)
 
-![Wooden Desk Lamp](/img/portfolio/etc_bureaulamp_03.jpg)
+![Wooden Desk Lamp / Houten bureaulamp 3](/img/portfolio/etc_bureaulamp_03.jpg)
