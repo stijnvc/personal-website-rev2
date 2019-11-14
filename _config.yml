@@ -10,8 +10,8 @@ date_format: "%b %-d, %Y"
 
 # The URL of the homepage of your site (without trailing slash). Leave this
 # empty when you run Jekyll locally.
-url: https://stijnvancuijk.com
-baseurl: ""
+url: https://stijnvc.github.io
+baseurl: "/personal-website-rev2"
 
 collections:
   fp-collection:
